@@ -6,220 +6,241 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,
-  StdCtrls, MaskEdit;
+  StdCtrls, MaskEdit, Buttons;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    btnStart: TButton;
-    Button1: TButton;
-    Button10: TButton;
-    Button100: TButton;
-    Button101: TButton;
-    Button102: TButton;
-    Button103: TButton;
-    Button104: TButton;
-    Button105: TButton;
-    Button106: TButton;
-    Button107: TButton;
-    Button108: TButton;
-    Button109: TButton;
-    Button11: TButton;
-    Button110: TButton;
-    Button111: TButton;
-    Button112: TButton;
-    Button113: TButton;
-    Button114: TButton;
-    Button115: TButton;
-    Button116: TButton;
-    Button117: TButton;
-    Button118: TButton;
-    Button119: TButton;
-    Button12: TButton;
-    Button120: TButton;
-    Button121: TButton;
-    Button122: TButton;
-    Button123: TButton;
-    Button124: TButton;
-    Button125: TButton;
-    Button126: TButton;
-    Button127: TButton;
-    Button128: TButton;
-    Button129: TButton;
-    Button13: TButton;
-    Button130: TButton;
-    Button131: TButton;
-    Button132: TButton;
-    Button133: TButton;
-    Button134: TButton;
-    Button135: TButton;
-    Button136: TButton;
-    Button137: TButton;
-    Button138: TButton;
-    Button139: TButton;
-    Button14: TButton;
-    Button140: TButton;
-    Button141: TButton;
-    Button142: TButton;
-    Button143: TButton;
-    Button144: TButton;
-    Button145: TButton;
-    Button146: TButton;
-    Button147: TButton;
-    Button148: TButton;
-    Button149: TButton;
-    Button15: TButton;
-    Button150: TButton;
-    Button151: TButton;
-    Button152: TButton;
-    Button153: TButton;
-    Button154: TButton;
-    Button155: TButton;
-    Button156: TButton;
-    Button157: TButton;
-    Button158: TButton;
-    Button159: TButton;
-    Button16: TButton;
-    Button160: TButton;
-    Button161: TButton;
-    Button162: TButton;
-    Button163: TButton;
-    Button164: TButton;
-    Button165: TButton;
-    Button166: TButton;
-    Button167: TButton;
-    Button168: TButton;
-    Button169: TButton;
-    Button17: TButton;
-    Button170: TButton;
-    Button171: TButton;
-    Button172: TButton;
-    Button173: TButton;
-    Button174: TButton;
-    Button175: TButton;
-    Button176: TButton;
-    Button177: TButton;
-    Button178: TButton;
-    Button179: TButton;
-    Button18: TButton;
-    Button180: TButton;
-    Button181: TButton;
-    Button182: TButton;
-    Button183: TButton;
-    Button184: TButton;
-    Button185: TButton;
-    Button186: TButton;
-    Button187: TButton;
-    Button188: TButton;
-    Button189: TButton;
-    Button19: TButton;
-    Button190: TButton;
-    Button191: TButton;
-    Button192: TButton;
-    Button193: TButton;
-    Button194: TButton;
-    Button195: TButton;
-    Button196: TButton;
-    Button197: TButton;
-    Button198: TButton;
-    Button199: TButton;
-    Button2: TButton;
-    Button20: TButton;
-    Button200: TButton;
-    Button21: TButton;
-    Button22: TButton;
-    Button23: TButton;
-    Button24: TButton;
-    Button25: TButton;
-    Button26: TButton;
-    Button27: TButton;
-    Button28: TButton;
-    Button29: TButton;
-    Button3: TButton;
-    Button30: TButton;
-    Button31: TButton;
-    Button32: TButton;
-    Button33: TButton;
-    Button34: TButton;
-    Button35: TButton;
-    Button36: TButton;
-    Button37: TButton;
-    Button38: TButton;
-    Button39: TButton;
-    Button4: TButton;
-    Button40: TButton;
-    Button41: TButton;
-    Button42: TButton;
-    Button43: TButton;
-    Button44: TButton;
-    Button45: TButton;
-    Button46: TButton;
-    Button47: TButton;
-    Button48: TButton;
-    Button49: TButton;
-    Button5: TButton;
-    Button50: TButton;
-    Button51: TButton;
-    Button52: TButton;
-    Button53: TButton;
-    Button54: TButton;
-    Button55: TButton;
-    Button56: TButton;
-    Button57: TButton;
-    Button58: TButton;
-    Button59: TButton;
-    Button6: TButton;
-    Button60: TButton;
-    Button61: TButton;
-    Button62: TButton;
-    Button63: TButton;
-    Button64: TButton;
-    Button65: TButton;
-    Button66: TButton;
-    Button67: TButton;
-    Button68: TButton;
-    Button69: TButton;
-    Button7: TButton;
-    Button70: TButton;
-    Button71: TButton;
-    Button72: TButton;
-    Button73: TButton;
-    Button74: TButton;
-    Button75: TButton;
-    Button76: TButton;
-    Button77: TButton;
-    Button78: TButton;
-    Button79: TButton;
-    Button8: TButton;
-    Button80: TButton;
-    Button81: TButton;
-    Button82: TButton;
-    Button83: TButton;
-    Button84: TButton;
-    Button85: TButton;
-    Button86: TButton;
-    Button87: TButton;
-    Button88: TButton;
-    Button89: TButton;
-    Button9: TButton;
-    Button90: TButton;
-    Button91: TButton;
-    Button92: TButton;
-    Button93: TButton;
-    Button94: TButton;
-    Button95: TButton;
-    Button96: TButton;
-    Button97: TButton;
-    Button98: TButton;
-    Button99: TButton;
+    btnStart: TSpeedButton;
+    btn_1_1: TSpeedButton;
+    btn_1_6: TSpeedButton;
+    btn_10_10: TSpeedButton;
+    btnJog2_1_1: TSpeedButton;
+    btnJog2_1_2: TSpeedButton;
+    btnJog2_1_3: TSpeedButton;
+    btnJog2_1_4: TSpeedButton;
+    btnJog2_1_5: TSpeedButton;
+    btnJog2_1_10: TSpeedButton;
+    btnJog2_1_9: TSpeedButton;
+    btnJog2_1_8: TSpeedButton;
+    btnJog2_1_7: TSpeedButton;
+    btn_2_10: TSpeedButton;
+    btnJog2_1_6: TSpeedButton;
+    Button111: TSpeedButton;
+    Button112: TSpeedButton;
+    Button113: TSpeedButton;
+    Button114: TSpeedButton;
+    Button115: TSpeedButton;
+    Button116: TSpeedButton;
+    Button117: TSpeedButton;
+    Button118: TSpeedButton;
+    Button119: TSpeedButton;
+    btn_2_9: TSpeedButton;
+    btnJog2_2_1: TSpeedButton;
+    btnJog2_4_1: TSpeedButton;
+    btnJog2_3_1: TSpeedButton;
+    Button123: TSpeedButton;
+    Button124: TSpeedButton;
+    Button125: TSpeedButton;
+    Button126: TSpeedButton;
+    Button127: TSpeedButton;
+    Button128: TSpeedButton;
+    Button129: TSpeedButton;
+    btn_2_8: TSpeedButton;
+    Button130: TSpeedButton;
+    Button131: TSpeedButton;
+    Button132: TSpeedButton;
+    Button133: TSpeedButton;
+    Button134: TSpeedButton;
+    Button135: TSpeedButton;
+    Button136: TSpeedButton;
+    Button137: TSpeedButton;
+    Button138: TSpeedButton;
+    Button139: TSpeedButton;
+    btn_2_7: TSpeedButton;
+    Button140: TSpeedButton;
+    btnJog2_5_1: TSpeedButton;
+    Button142: TSpeedButton;
+    Button143: TSpeedButton;
+    Button144: TSpeedButton;
+    Button145: TSpeedButton;
+    Button146: TSpeedButton;
+    Button147: TSpeedButton;
+    Button148: TSpeedButton;
+    Button149: TSpeedButton;
+    btn_2_6: TSpeedButton;
+    Button150: TSpeedButton;
+    Button151: TSpeedButton;
+    Button152: TSpeedButton;
+    Button153: TSpeedButton;
+    Button154: TSpeedButton;
+    Button155: TSpeedButton;
+    Button156: TSpeedButton;
+    Button157: TSpeedButton;
+    Button158: TSpeedButton;
+    Button159: TSpeedButton;
+    btn_2_5: TSpeedButton;
+    Button160: TSpeedButton;
+    Button161: TSpeedButton;
+    Button162: TSpeedButton;
+    Button163: TSpeedButton;
+    Button164: TSpeedButton;
+    Button165: TSpeedButton;
+    Button166: TSpeedButton;
+    Button167: TSpeedButton;
+    Button168: TSpeedButton;
+    Button169: TSpeedButton;
+    btn_2_4: TSpeedButton;
+    Button170: TSpeedButton;
+    Button171: TSpeedButton;
+    Button172: TSpeedButton;
+    Button173: TSpeedButton;
+    Button174: TSpeedButton;
+    Button175: TSpeedButton;
+    Button176: TSpeedButton;
+    Button177: TSpeedButton;
+    btnJog2_6_1: TSpeedButton;
+    btnJog2_8_1: TSpeedButton;
+    btn_2_3: TSpeedButton;
+    btnJog2_7_1: TSpeedButton;
+    btnJog2_10_1: TSpeedButton;
+    btnJog2_9_1: TSpeedButton;
+    Button183: TSpeedButton;
+    Button184: TSpeedButton;
+    Button185: TSpeedButton;
+    Button186: TSpeedButton;
+    Button187: TSpeedButton;
+    Button188: TSpeedButton;
+    Button189: TSpeedButton;
+    btn_2_2: TSpeedButton;
+    Button190: TSpeedButton;
+    Button191: TSpeedButton;
+    Button192: TSpeedButton;
+    Button193: TSpeedButton;
+    Button194: TSpeedButton;
+    Button195: TSpeedButton;
+    Button196: TSpeedButton;
+    Button197: TSpeedButton;
+    Button198: TSpeedButton;
+    Button199: TSpeedButton;
+    btn_1_2: TSpeedButton;
+    btn_2_1: TSpeedButton;
+    Button200: TSpeedButton;
+    btn_4_1: TSpeedButton;
+    btn_3_1: TSpeedButton;
+    btn_3_2: TSpeedButton;
+    btn_4_2: TSpeedButton;
+    btn_4_3: TSpeedButton;
+    btn_3_3: TSpeedButton;
+    btn_3_4: TSpeedButton;
+    btn_4_4: TSpeedButton;
+    btn_4_5: TSpeedButton;
+    btn_1_3: TSpeedButton;
+    btn_4_6: TSpeedButton;
+    Button31: TSpeedButton;
+    Button32: TSpeedButton;
+    btn_4_9: TSpeedButton;
+    btn_4_10: TSpeedButton;
+    btn_3_10: TSpeedButton;
+    btn_3_9: TSpeedButton;
+    btn_3_8: TSpeedButton;
+    btn_3_7: TSpeedButton;
+    btn_3_6: TSpeedButton;
+    btn_1_4: TSpeedButton;
+    btn_3_5: TSpeedButton;
+    btn_5_1: TSpeedButton;
+    btn_8_10: TSpeedButton;
+    btn_7_10: TSpeedButton;
+    btn_6_10: TSpeedButton;
+    btn_5_10: TSpeedButton;
+    btn_5_9: TSpeedButton;
+    btn_6_9: TSpeedButton;
+    btn_7_9: TSpeedButton;
+    btn_8_9: TSpeedButton;
+    btn_1_5: TSpeedButton;
+    btn_8_8: TSpeedButton;
+    btn_7_8: TSpeedButton;
+    btn_6_8: TSpeedButton;
+    btn_5_8: TSpeedButton;
+    btn_5_7: TSpeedButton;
+    btn_6_7: TSpeedButton;
+    btn_7_7: TSpeedButton;
+    btn_8_7: TSpeedButton;
+    btn_8_6: TSpeedButton;
+    btn_7_6: TSpeedButton;
+    btn_1_10: TSpeedButton;
+    btn_6_6: TSpeedButton;
+    btn_5_6: TSpeedButton;
+    btn_5_5: TSpeedButton;
+    btn_6_5: TSpeedButton;
+    btn_7_5: TSpeedButton;
+    btn_8_5: TSpeedButton;
+    btn_8_4: TSpeedButton;
+    btn_6_4: TSpeedButton;
+    btn_7_4: TSpeedButton;
+    btn_5_4: TSpeedButton;
+    btn_1_9: TSpeedButton;
+    btn_5_3: TSpeedButton;
+    btn_6_3: TSpeedButton;
+    btn_7_3: TSpeedButton;
+    btn_8_3: TSpeedButton;
+    btn_8_2: TSpeedButton;
+    btn_7_2: TSpeedButton;
+    btn_6_2: TSpeedButton;
+    btn_5_2: TSpeedButton;
+    btn_6_1: TSpeedButton;
+    btn_8_1: TSpeedButton;
+    btn_1_8: TSpeedButton;
+    btn_7_1: TSpeedButton;
+    btn_10_1: TSpeedButton;
+    btn_9_1: TSpeedButton;
+    btn_9_2: TSpeedButton;
+    btn_10_2: TSpeedButton;
+    btn_10_3: TSpeedButton;
+    btn_9_3: TSpeedButton;
+    btn_9_4: TSpeedButton;
+    btn_10_4: TSpeedButton;
+    btn_10_5: TSpeedButton;
+    btn_1_7: TSpeedButton;
+    btn_9_5: TSpeedButton;
+    btn_9_6: TSpeedButton;
+    btn_10_6: TSpeedButton;
+    btn_10_7: TSpeedButton;
+    btn_9_7: TSpeedButton;
+    btn_9_8: TSpeedButton;
+    btn_10_8: TSpeedButton;
+    btn_10_9: TSpeedButton;
+    btn_9_9: TSpeedButton;
+    btn_9_10: TSpeedButton;
     edtJogador1: TEdit;
     edtJogador2: TEdit;
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
+    ImageList1: TImageList;
     Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label2: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     Panel2: TPanel;
     Panel3: TPanel;
     pnlLogin: TPanel;
@@ -232,15 +253,22 @@ type
     procedure edtJogador1Change(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
+    procedure Label2Click(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
   private
-
+    //DECLARANDO FUNÇÕES
+    procedure carregarMatriz;
+    procedure sortearNavios(linha, coluna, indiceImg: integer;
+      btnSelecionado: TSpeedButton);
+    //procedure sortearMinas(linhaJog1, colunaJog2, indiceImg: integer);
+    //procedure sortearSubmarinos(linhaJog1, colunaJog2, indiceImg: integer);
   public
-
   end;
 
 var
   Form1: TForm1;
+  matrizJog1: array [0..9, 0..9] of integer;
+  cont: integer;
 
 implementation
 
@@ -258,8 +286,52 @@ begin
 
 end;
 
+procedure TForm1.Label2Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.Panel2Click(Sender: TObject);
 begin
+
+end;
+
+//GARREGANDO A MATRIZ COM VALORES PADRÕES
+procedure TForm1.carregarMatriz;
+var
+  i, j: integer;
+
+begin
+  for i := 0 to 10 do
+  begin
+    for j := 0 to 10 do
+    begin
+      matrizJog1[i, j] := -1;
+    end;
+  end;
+end;
+
+//SORTEAR NAVIOS EM ESPAÇOS NÃO OCUPADOS
+procedure TForm1.sortearNavios(linha, coluna, indiceImg: integer;
+  btnSelecionado: TSpeedButton);
+var
+  j: integer;
+
+  //**** VERIFICAR ****
+begin
+  if matrizJog1[linha, coluna] = -1 then
+  begin
+    matrizJog1[linha, coluna] := indiceImg;
+    for j := 0 to ComponentCount - 1 do
+    begin
+      if Components[j].Name = 'btn_' + IntToStr(linha) + '_' +
+        IntToStr(coluna) then
+      begin
+        btnSelecionado := TSpeedButton(Components[j]);
+        btnSelecionado.ImageIndex := indiceImg;
+      end;
+    end;
+  end;
 
 end;
 
@@ -267,20 +339,57 @@ procedure TForm1.edtJogador1Change(Sender: TObject);
 
 begin
 
-
 end;
 
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
 var
-  nome1, nome2 : string;
+  nome1, nome2: string;
+  i, j, linhaJog1, linhaJog2, colunaJog1, colunaJog2, indiceImg: integer;
+  btnSelecionado: TSpeedButton;
 
 begin
-  nome1:=edtJogador1.Text;
-  nome2:=edtJogador2.Text;
+  cont := 0;
+  nome1 := edtJogador1.Text;
+  nome2 := edtJogador2.Text;
+  btnSelecionado := nil;
 
-  pnlLogin.Visible:=false;
+  tabLogin.TabVisible := False;
+  pgAreaJogo.ActivePage := tabTelaJogador1;
+
+  carregarMatriz;
+
+  for i := 0 to 100 do
+  begin
+    linhaJog1 := Random(11);
+    colunaJog1 := Random(11);
+    indiceImg := Random(4);
+
+    case cont of
+      0 .. 19:
+        sortearNavios(linhaJog1, colunaJog2, indiceImg, btnSelecionado);
+      20 .. 40:
+        //   sortearMinas(linhaJog1, colunaJog2, indiceImg: integer);
+        ShowMessage('Teste!!');
+      41 .. 61:
+        // sortearSubmarinos(linhaJog1, colunaJog2, indiceImg: integer);
+        ShowMessage('Teste_2!!');
+    end;
+
+
+    //Inserindo as imagens nos botões
+    //    for j := 0 to ComponentCount - 1 do
+    //  begin
+    //  if Components[j].Name = 'btn_' + IntToStr(linhaJog1) + '_' +
+    //  IntToStr(colunaJog1) then
+    //begin
+    //btnSelecionado := TSpeedButton(Components[j]);
+    //btnSelecionado.ImageIndex := indiceImg;
+    //end;
+    //end;
+    //end;
+    //Chamando a função
+  end;
 end;
 
 end.
-
