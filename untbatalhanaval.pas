@@ -250,7 +250,6 @@ type
     tabTelaJogador2: TTabSheet;
     tabTelaJogador1: TTabSheet;
     procedure btnStartClick(Sender: TObject);
-    procedure edtJogador1Change(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -258,10 +257,12 @@ type
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
-    procedure sortearNavios(linha, coluna, indiceImg: integer;
+    procedure sortearNavios(linha, coluna, navio: integer;
       btnSelecionado: TSpeedButton);
-    //procedure sortearMinas(linhaJog1, colunaJog2, indiceImg: integer);
-    //procedure sortearSubmarinos(linhaJog1, colunaJog2, indiceImg: integer);
+    procedure sortearMinas(linha, coluna, mina: integer;
+      btnSelecionado: TSpeedButton);
+    procedure sortearSubmarinos(linha, coluna, submarino: integer;
+      btnSelecionado: TSpeedButton);
   public
   end;
 
@@ -306,46 +307,61 @@ begin
   begin
     for j := 0 to 10 do
     begin
-      matrizJog1[i, j] := -1;
+      matrizJog1[i, j] := 0;
     end;
   end;
 end;
 
 //SORTEAR NAVIOS EM ESPAÇOS NÃO OCUPADOS
-procedure TForm1.sortearNavios(linha, coluna, indiceImg: integer;
+procedure TForm1.sortearNavios(linha, coluna, navio: integer;
   btnSelecionado: TSpeedButton);
-var
-  j: integer;
-
-  //**** VERIFICAR ****
 begin
-  if matrizJog1[linha, coluna] = -1 then
-  begin
-    matrizJog1[linha, coluna] := indiceImg;
-    for j := 0 to ComponentCount - 1 do
-    begin
-      if Components[j].Name = 'btn_' + IntToStr(linha) + '_' +
-        IntToStr(coluna) then
-      begin
-        btnSelecionado := TSpeedButton(Components[j]);
-        btnSelecionado.ImageIndex := indiceImg;
-      end;
-    end;
-  end;
+ //**** VERIFICAR ****
+  if matrizJog1[linha, coluna] = 0 then
+    matrizJog1[linha, coluna] := navio
+  else
+    cont := cont - 1;
 
+
+
+  //for j := 0 to ComponentCount - 1 do
+  //begin
+  //if Components[j].Name = 'btn_' + IntToStr(linha) + '_' +
+  //IntToStr(coluna) then
+  //begin
+  //btnSelecionado := TSpeedButton(Components[j]);
+  //btnSelecionado.ImageIndex := indiceImg;
+  //end;
+  //  end;
 end;
 
-procedure TForm1.edtJogador1Change(Sender: TObject);
-
+//SORTEANDO MINAS
+procedure TForm1.sortearMinas(linha, coluna, mina: integer;
+  btnSelecionado: TSpeedButton);
+//**** VERIFICAR ****
 begin
+  if matrizJog1[linha, coluna] = 0 then
+    matrizJog1[linha, coluna] := mina
+  else
+    cont := cont - 1;
+end;
 
+procedure TForm1.sortearSubmarinos(linha, coluna, submarino: integer;
+  btnSelecionado: TSpeedButton);
+//**** VERIFICAR ****
+begin
+  if matrizJog1[linha, coluna] = 0 then
+    matrizJog1[linha, coluna] := submarino
+  else
+    cont := cont - 1;
 end;
 
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
 var
   nome1, nome2: string;
-  i, j, linhaJog1, linhaJog2, colunaJog1, colunaJog2, indiceImg: integer;
+  linhaJog1, linhaJog2, colunaJog1, colunaJog2, indiceNav, indiceMina,
+  indiceSub: integer;
   btnSelecionado: TSpeedButton;
 
 begin
@@ -353,43 +369,34 @@ begin
   nome1 := edtJogador1.Text;
   nome2 := edtJogador2.Text;
   btnSelecionado := nil;
+  indiceNav := 1;
+  indiceSub := 2;
+  indiceMina := 3;
 
   tabLogin.TabVisible := False;
   pgAreaJogo.ActivePage := tabTelaJogador1;
 
   carregarMatriz;
 
-  for i := 0 to 100 do
+  for cont := 0 to 99 do
   begin
     linhaJog1 := Random(11);
     colunaJog1 := Random(11);
-    indiceImg := Random(4);
+    //indiceImg := Random(4);
 
     case cont of
       0 .. 19:
-        sortearNavios(linhaJog1, colunaJog2, indiceImg, btnSelecionado);
+        sortearNavios(linhaJog1, colunaJog1, indiceNav, btnSelecionado);
       20 .. 40:
-        //   sortearMinas(linhaJog1, colunaJog2, indiceImg: integer);
-        ShowMessage('Teste!!');
+        sortearMinas(linhaJog1, colunaJog2, indiceMina, btnSelecionado);
       41 .. 61:
-        // sortearSubmarinos(linhaJog1, colunaJog2, indiceImg: integer);
-        ShowMessage('Teste_2!!');
+        sortearSubmarinos(linhaJog1, colunaJog2, indiceSub, btnSelecionado);
     end;
-
-
-    //Inserindo as imagens nos botões
-    //    for j := 0 to ComponentCount - 1 do
-    //  begin
-    //  if Components[j].Name = 'btn_' + IntToStr(linhaJog1) + '_' +
-    //  IntToStr(colunaJog1) then
-    //begin
-    //btnSelecionado := TSpeedButton(Components[j]);
-    //btnSelecionado.ImageIndex := indiceImg;
-    //end;
-    //end;
-    //end;
-    //Chamando a função
   end;
+  ShowMessage(IntToStr(matrizJog1[1, 3]));
+  ShowMessage(IntToStr(matrizJog1[2, 3]));
+  ShowMessage(IntToStr(matrizJog1[3, 4]));
+  ShowMessage(IntToStr(matrizJog1[6, 1]));
 end;
 
 end.
