@@ -25,8 +25,8 @@ object Form1: TForm1
       Height = 512
       Top = 16
       Width = 816
-      ActivePage = tabTelaJogador1
-      TabIndex = 1
+      ActivePage = tabLogin
+      TabIndex = 0
       TabOrder = 0
       object tabLogin: TTabSheet
         Caption = 'Login'
@@ -2981,6 +2981,7 @@ object Form1: TForm1
               00C970D76ED059B0E432AE29D8B2BD4C0A6F18FED16E69EBFDCC21A2F9DFC110
               67338C55F8966B34DE7FFFD9
             }
+            Transparent = True
           end
           object btn_1_2: TSpeedButton
             Left = 250
@@ -3027,9 +3028,12 @@ object Form1: TForm1
             Height = 40
             Top = 51
             Width = 40
-            Color = clInfoText
+            Color = clGradientActiveCaption
+            Font.Color = clGradientActiveCaption
             Images = ImageList1
             OnClick = btn_1_1Click
+            ParentFont = False
+            ParentShowHint = False
           end
           object btn_1_9: TSpeedButton
             Left = 516
@@ -6378,252 +6382,252 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
           end
-          object Button142: TSpeedButton
+          object btnJog2_8_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button143: TSpeedButton
+          object btnJog2_7_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button144: TSpeedButton
+          object btnJog2_6_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button145: TSpeedButton
+          object btnJog2_5_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button146: TSpeedButton
+          object btnJog2_5_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button147: TSpeedButton
+          object btnJog2_6_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button148: TSpeedButton
+          object btnJog2_7_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button149: TSpeedButton
+          object btnJog2_8_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button150: TSpeedButton
+          object btnJog2_8_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button151: TSpeedButton
+          object btnJog2_7_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button152: TSpeedButton
+          object btnJog2_6_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button153: TSpeedButton
+          object btnJog2_5_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button154: TSpeedButton
+          object btnJog2_5_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button155: TSpeedButton
+          object btnJog2_6_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button156: TSpeedButton
+          object btnJog2_7_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button157: TSpeedButton
+          object btnJog2_8_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button158: TSpeedButton
+          object btnJog2_8_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button159: TSpeedButton
+          object btnJog2_7_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button160: TSpeedButton
+          object btnJog2_6_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button161: TSpeedButton
+          object btnJog2_5_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button162: TSpeedButton
+          object btnJog2_5_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button163: TSpeedButton
+          object btnJog2_6_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button164: TSpeedButton
+          object btnJog2_7_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button165: TSpeedButton
+          object btnJog2_8_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button166: TSpeedButton
+          object btnJog2_8_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button167: TSpeedButton
+          object btnJog2_6_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button168: TSpeedButton
+          object btnJog2_7_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button169: TSpeedButton
+          object btnJog2_5_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button170: TSpeedButton
+          object btnJog2_5_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 203
             Width = 40
             Color = clHighlight
           end
-          object Button171: TSpeedButton
+          object btnJog2_6_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button172: TSpeedButton
+          object btnJog2_7_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button173: TSpeedButton
+          object btnJog2_8_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button174: TSpeedButton
+          object btnJog2_8_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 317
             Width = 40
             Color = clHighlight
           end
-          object Button175: TSpeedButton
+          object btnJog2_7_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 279
             Width = 40
             Color = clHighlight
           end
-          object Button176: TSpeedButton
+          object btnJog2_6_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 241
             Width = 40
             Color = clHighlight
           end
-          object Button177: TSpeedButton
+          object btnJog2_5_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 203
@@ -6665,126 +6669,126 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
           end
-          object Button183: TSpeedButton
+          object btnJog2_9_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button184: TSpeedButton
+          object btnJog2_10_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button185: TSpeedButton
+          object btnJog2_10_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button186: TSpeedButton
+          object btnJog2_9_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button187: TSpeedButton
+          object btnJog2_9_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button188: TSpeedButton
+          object btnJog2_10_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button189: TSpeedButton
+          object btnJog2_10_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button190: TSpeedButton
+          object btnJog2_9_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button191: TSpeedButton
+          object btnJog2_9_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button192: TSpeedButton
+          object btnJog2_10_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button193: TSpeedButton
+          object btnJog2_10_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button194: TSpeedButton
+          object btnJog2_9_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button195: TSpeedButton
+          object btnJog2_9_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button196: TSpeedButton
+          object btnJog2_10_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button197: TSpeedButton
+          object btnJog2_10_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 393
             Width = 40
             Color = clHighlight
           end
-          object Button198: TSpeedButton
+          object btnJog2_9_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button199: TSpeedButton
+          object btnJog2_9_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 355
             Width = 40
             Color = clHighlight
           end
-          object Button200: TSpeedButton
+          object btnJog2_10_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 393

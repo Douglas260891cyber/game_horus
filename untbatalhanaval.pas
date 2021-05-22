@@ -62,72 +62,72 @@ type
     btn_2_7: TSpeedButton;
     btnJog2_3_5: TSpeedButton;
     btnJog2_5_1: TSpeedButton;
-    Button142: TSpeedButton;
-    Button143: TSpeedButton;
-    Button144: TSpeedButton;
-    Button145: TSpeedButton;
-    Button146: TSpeedButton;
-    Button147: TSpeedButton;
-    Button148: TSpeedButton;
-    Button149: TSpeedButton;
+    btnJog2_8_10: TSpeedButton;
+    btnJog2_7_10: TSpeedButton;
+    btnJog2_6_10: TSpeedButton;
+    btnJog2_5_10: TSpeedButton;
+    btnJog2_5_9: TSpeedButton;
+    btnJog2_6_9: TSpeedButton;
+    btnJog2_7_9: TSpeedButton;
+    btnJog2_8_9: TSpeedButton;
     btn_2_6: TSpeedButton;
-    Button150: TSpeedButton;
-    Button151: TSpeedButton;
-    Button152: TSpeedButton;
-    Button153: TSpeedButton;
-    Button154: TSpeedButton;
-    Button155: TSpeedButton;
-    Button156: TSpeedButton;
-    Button157: TSpeedButton;
-    Button158: TSpeedButton;
-    Button159: TSpeedButton;
+    btnJog2_8_8: TSpeedButton;
+    btnJog2_7_8: TSpeedButton;
+    btnJog2_6_8: TSpeedButton;
+    btnJog2_5_8: TSpeedButton;
+    btnJog2_5_7: TSpeedButton;
+    btnJog2_6_7: TSpeedButton;
+    btnJog2_7_7: TSpeedButton;
+    btnJog2_8_7: TSpeedButton;
+    btnJog2_8_6: TSpeedButton;
+    btnJog2_7_6: TSpeedButton;
     btn_2_5: TSpeedButton;
-    Button160: TSpeedButton;
-    Button161: TSpeedButton;
-    Button162: TSpeedButton;
-    Button163: TSpeedButton;
-    Button164: TSpeedButton;
-    Button165: TSpeedButton;
-    Button166: TSpeedButton;
-    Button167: TSpeedButton;
-    Button168: TSpeedButton;
-    Button169: TSpeedButton;
+    btnJog2_6_6: TSpeedButton;
+    btnJog2_5_6: TSpeedButton;
+    btnJog2_5_5: TSpeedButton;
+    btnJog2_6_5: TSpeedButton;
+    btnJog2_7_5: TSpeedButton;
+    btnJog2_8_5: TSpeedButton;
+    btnJog2_8_4: TSpeedButton;
+    btnJog2_6_4: TSpeedButton;
+    btnJog2_7_4: TSpeedButton;
+    btnJog2_5_4: TSpeedButton;
     btn_2_4: TSpeedButton;
-    Button170: TSpeedButton;
-    Button171: TSpeedButton;
-    Button172: TSpeedButton;
-    Button173: TSpeedButton;
-    Button174: TSpeedButton;
-    Button175: TSpeedButton;
-    Button176: TSpeedButton;
-    Button177: TSpeedButton;
+    btnJog2_5_3: TSpeedButton;
+    btnJog2_6_3: TSpeedButton;
+    btnJog2_7_3: TSpeedButton;
+    btnJog2_8_3: TSpeedButton;
+    btnJog2_8_2: TSpeedButton;
+    btnJog2_7_2: TSpeedButton;
+    btnJog2_6_2: TSpeedButton;
+    btnJog2_5_2: TSpeedButton;
     btnJog2_6_1: TSpeedButton;
     btnJog2_8_1: TSpeedButton;
     btn_2_3: TSpeedButton;
     btnJog2_7_1: TSpeedButton;
     btnJog2_10_1: TSpeedButton;
     btnJog2_9_1: TSpeedButton;
-    Button183: TSpeedButton;
-    Button184: TSpeedButton;
-    Button185: TSpeedButton;
-    Button186: TSpeedButton;
-    Button187: TSpeedButton;
-    Button188: TSpeedButton;
-    Button189: TSpeedButton;
+    btnJog2_9_2: TSpeedButton;
+    btnJog2_10_2: TSpeedButton;
+    btnJog2_10_3: TSpeedButton;
+    btnJog2_9_3: TSpeedButton;
+    btnJog2_9_4: TSpeedButton;
+    btnJog2_10_4: TSpeedButton;
+    btnJog2_10_5: TSpeedButton;
     btn_2_2: TSpeedButton;
-    Button190: TSpeedButton;
-    Button191: TSpeedButton;
-    Button192: TSpeedButton;
-    Button193: TSpeedButton;
-    Button194: TSpeedButton;
-    Button195: TSpeedButton;
-    Button196: TSpeedButton;
-    Button197: TSpeedButton;
-    Button198: TSpeedButton;
-    Button199: TSpeedButton;
+    btnJog2_9_5: TSpeedButton;
+    btnJog2_9_6: TSpeedButton;
+    btnJog2_10_6: TSpeedButton;
+    btnJog2_10_7: TSpeedButton;
+    btnJog2_9_7: TSpeedButton;
+    btnJog2_9_8: TSpeedButton;
+    btnJog2_10_8: TSpeedButton;
+    btnJog2_10_9: TSpeedButton;
+    btnJog2_9_9: TSpeedButton;
+    btnJog2_9_10: TSpeedButton;
     btn_1_2: TSpeedButton;
     btn_2_1: TSpeedButton;
-    Button200: TSpeedButton;
+    btnJog2_10_10: TSpeedButton;
     btn_4_1: TSpeedButton;
     btn_3_1: TSpeedButton;
     btn_3_2: TSpeedButton;
@@ -260,9 +260,9 @@ type
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
-    procedure sortearNavios(linha, coluna, navio: integer);
-    procedure sortearMinas(linha, coluna, mina: integer);
-    procedure sortearSubmarinos(linha, coluna, submarino: integer);
+    procedure sortearNavios(linha, coluna, navio, linha2, coluna2: integer);
+    procedure sortearMinas(linha, coluna, mina, linha2, coluna2: integer);
+    procedure sortearSubmarinos(linha, coluna, submarino, linha2, coluna2: integer);
     procedure carregarMatrizNomesBtn();
     function buscarBotao(nomeBtnClicado: string): integer;
 
@@ -273,6 +273,8 @@ var
   Form1: TForm1;
   matrizJog1: array [1..10, 1..10] of integer;
   matrizJog1NomeBtn: array [1..10, 1..10] of string;
+  matrizJog2: array [1..10, 1..10] of integer;
+  matrizJog2NomeBtn: array [1..10, 1..10] of string;
   cont: integer;
 
 implementation
@@ -312,16 +314,20 @@ begin
     for j := 1 to 10 do
     begin
       matrizJog1[i, j] := 0;
+      matrizJog2[i, j] := 0;
     end;
   end;
 end;
 
 //SORTEAR NAVIOS EM ESPAÇOS NÃO OCUPADOS
-procedure TForm1.sortearNavios(linha, coluna, navio: integer);
+procedure TForm1.sortearNavios(linha, coluna, navio, linha2, coluna2: integer);
 begin
   //**** VERIFICAR ****
-  if matrizJog1[linha, coluna] = 0 then
-    matrizJog1[linha, coluna] := navio
+  if matrizJog1[linha, coluna] = 0 and matrizJog2[linha2, coluna2] then
+  begin
+    matrizJog1[linha, coluna] := navio;
+    matrizJog2[linha2, coluna2] := navio;
+  end
   else
     cont := cont - 1;
 
@@ -337,18 +343,24 @@ begin
 end;
 
 //SORTEANDO MINAS
-procedure TForm1.sortearMinas(linha, coluna, mina: integer);
+procedure TForm1.sortearMinas(linha, coluna, mina, linha2, coluna2: integer);
 begin
-  if matrizJog1[linha, coluna] = 0 then
-    matrizJog1[linha, coluna] := mina
+  if matrizJog1[linha, coluna] = 0 and matrizJog2[linha2, coluna2] then
+  begin
+    matrizJog1[linha, coluna] := mina;
+    matrizJog2[linha2, coluna2] := mina;
+  end
   else
     cont := cont - 1;
 end;
 
-procedure TForm1.sortearSubmarinos(linha, coluna, submarino: integer);
+procedure TForm1.sortearSubmarinos(linha, coluna, submarino, linha2, coluna2: integer);
 begin
-  if matrizJog1[linha, coluna] = 0 then
-    matrizJog1[linha, coluna] := submarino
+  if matrizJog1[linha, coluna] = 0 and matrizJog2[linha2, coluna2] then
+  begin
+    matrizJog1[linha, coluna] := submarino;
+    matrizJog2[linha2, coluna2] := submarino;
+  end
   else
     cont := cont - 1;
 end;
@@ -391,9 +403,8 @@ end;
 procedure TForm1.btnStartClick(Sender: TObject);
 var
   //nome1, nome2: string;
-  linhaJog1, colunaJog1, indiceNav, indiceMina, indiceSub: integer;
-
-  //btnSelecionado: TSpeedButton;
+  linhaJog1, colunaJog1, linhaJog2, colunaJog2, indiceNav, indiceMina,
+  indiceSub: integer;
 
 begin
   cont := 0;
@@ -409,16 +420,18 @@ begin
 
   for cont := 0 to 99 do
   begin
-    linhaJog1 := Random(10)+1;
-    colunaJog1 := Random(10)+1;
+    linhaJog1 := Random(10) + 1;
+    colunaJog1 := Random(10) + 1;
+    linhaJog2 := Random(10) + 1;
+    colunaJog2 := Random(10) + 1;
 
     case cont of
       1 .. 20:
-        sortearNavios(linhaJog1, colunaJog1, indiceNav);
+        sortearNavios(linhaJog1, colunaJog1, indiceNav, linhaJog2, colunaJog2);
       21 .. 40:
-        sortearMinas(linhaJog1, colunaJog1, indiceMina);
+        sortearMinas(linhaJog1, colunaJog1, indiceMina, linhaJog2, colunaJog2);
       41 .. 60:
-        sortearSubmarinos(linhaJog1, colunaJog1, indiceSub);
+        sortearSubmarinos(linhaJog1, colunaJog1, indiceSub, linhaJog2, colunaJog2);
     end;
   end;
 end;
