@@ -28,39 +28,39 @@ type
     btnJog2_1_7: TSpeedButton;
     btn_2_10: TSpeedButton;
     btnJog2_1_6: TSpeedButton;
-    Button111: TSpeedButton;
-    Button112: TSpeedButton;
-    Button113: TSpeedButton;
-    Button114: TSpeedButton;
-    Button115: TSpeedButton;
-    Button116: TSpeedButton;
-    Button117: TSpeedButton;
-    Button118: TSpeedButton;
-    Button119: TSpeedButton;
+    btnJog2_2_10: TSpeedButton;
+    btnJog2_2_9: TSpeedButton;
+    btnJog2_2_8: TSpeedButton;
+    btnJog2_2_7: TSpeedButton;
+    btnJog2_2_6: TSpeedButton;
+    btnJog2_2_5: TSpeedButton;
+    btnJog2_2_4: TSpeedButton;
+    btnJog2_2_3: TSpeedButton;
+    btnJog2_2_2: TSpeedButton;
     btn_2_9: TSpeedButton;
     btnJog2_2_1: TSpeedButton;
     btnJog2_4_1: TSpeedButton;
     btnJog2_3_1: TSpeedButton;
-    Button123: TSpeedButton;
-    Button124: TSpeedButton;
-    Button125: TSpeedButton;
-    Button126: TSpeedButton;
-    Button127: TSpeedButton;
-    Button128: TSpeedButton;
-    Button129: TSpeedButton;
+    btnJog2_3_2: TSpeedButton;
+    btnJog2_4_2: TSpeedButton;
+    btnJog2_4_3: TSpeedButton;
+    btnJog2_3_3: TSpeedButton;
+    btnJog2_3_4: TSpeedButton;
+    btnJog2_4_4: TSpeedButton;
+    btnJog2_4_5: TSpeedButton;
     btn_2_8: TSpeedButton;
-    Button130: TSpeedButton;
-    Button131: TSpeedButton;
-    Button132: TSpeedButton;
-    Button133: TSpeedButton;
-    Button134: TSpeedButton;
-    Button135: TSpeedButton;
-    Button136: TSpeedButton;
-    Button137: TSpeedButton;
-    Button138: TSpeedButton;
-    Button139: TSpeedButton;
+    btnJog2_4_6: TSpeedButton;
+    btnJog2_4_7: TSpeedButton;
+    btnJog2_4_8: TSpeedButton;
+    btnJog2_4_9: TSpeedButton;
+    btnJog2_4_10: TSpeedButton;
+    btnJog2_3_10: TSpeedButton;
+    btnJog2_3_9: TSpeedButton;
+    btnJog2_3_8: TSpeedButton;
+    btnJog2_3_7: TSpeedButton;
+    btnJog2_3_6: TSpeedButton;
     btn_2_7: TSpeedButton;
-    Button140: TSpeedButton;
+    btnJog2_3_5: TSpeedButton;
     btnJog2_5_1: TSpeedButton;
     Button142: TSpeedButton;
     Button143: TSpeedButton;
@@ -250,6 +250,9 @@ type
     tabTelaJogador2: TTabSheet;
     tabTelaJogador1: TTabSheet;
     procedure btnStartClick(Sender: TObject);
+    procedure btn_1_1Click(Sender: TObject);
+    procedure btn_1_2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
@@ -257,18 +260,19 @@ type
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
-    procedure sortearNavios(linha, coluna, navio: integer;
-      btnSelecionado: TSpeedButton);
-    procedure sortearMinas(linha, coluna, mina: integer;
-      btnSelecionado: TSpeedButton);
-    procedure sortearSubmarinos(linha, coluna, submarino: integer;
-      btnSelecionado: TSpeedButton);
+    procedure sortearNavios(linha, coluna, navio: integer);
+    procedure sortearMinas(linha, coluna, mina: integer);
+    procedure sortearSubmarinos(linha, coluna, submarino: integer);
+    procedure carregarMatrizNomesBtn();
+    function buscarBotao(nomeBtnClicado: string): integer;
+
   public
   end;
 
 var
   Form1: TForm1;
-  matrizJog1: array [0..9, 0..9] of integer;
+  matrizJog1: array [1..10, 1..10] of integer;
+  matrizJog1NomeBtn: array [1..10, 1..10] of string;
   cont: integer;
 
 implementation
@@ -303,9 +307,9 @@ var
   i, j: integer;
 
 begin
-  for i := 0 to 10 do
+  for i := 1 to 10 do
   begin
-    for j := 0 to 10 do
+    for j := 1 to 10 do
     begin
       matrizJog1[i, j] := 0;
     end;
@@ -313,16 +317,13 @@ begin
 end;
 
 //SORTEAR NAVIOS EM ESPAÇOS NÃO OCUPADOS
-procedure TForm1.sortearNavios(linha, coluna, navio: integer;
-  btnSelecionado: TSpeedButton);
+procedure TForm1.sortearNavios(linha, coluna, navio: integer);
 begin
- //**** VERIFICAR ****
+  //**** VERIFICAR ****
   if matrizJog1[linha, coluna] = 0 then
     matrizJog1[linha, coluna] := navio
   else
     cont := cont - 1;
-
-
 
   //for j := 0 to ComponentCount - 1 do
   //begin
@@ -336,9 +337,7 @@ begin
 end;
 
 //SORTEANDO MINAS
-procedure TForm1.sortearMinas(linha, coluna, mina: integer;
-  btnSelecionado: TSpeedButton);
-//**** VERIFICAR ****
+procedure TForm1.sortearMinas(linha, coluna, mina: integer);
 begin
   if matrizJog1[linha, coluna] = 0 then
     matrizJog1[linha, coluna] := mina
@@ -346,9 +345,7 @@ begin
     cont := cont - 1;
 end;
 
-procedure TForm1.sortearSubmarinos(linha, coluna, submarino: integer;
-  btnSelecionado: TSpeedButton);
-//**** VERIFICAR ****
+procedure TForm1.sortearSubmarinos(linha, coluna, submarino: integer);
 begin
   if matrizJog1[linha, coluna] = 0 then
     matrizJog1[linha, coluna] := submarino
@@ -356,47 +353,91 @@ begin
     cont := cont - 1;
 end;
 
+procedure TForm1.carregarMatrizNomesBtn();
+var
+  i, j: integer;
+  nomeBtn: string;
+
+begin
+  for i := 1 to 10 do
+  begin
+    for j := 1 to 10 do
+    begin
+      nomeBtn := 'btn_' + IntToStr(i) + '_' + IntToStr(j);
+      matrizJog1NomeBtn[i, j] := nomeBtn;
+    end;
+  end;
+end;
+
+function TForm1.buscarBotao(nomeBtnClicado: string): integer;
+var
+  i, j: integer;
+
+begin
+  for i := 1 to 10 do
+  begin
+    for j := 1 to 10 do
+    begin
+      if matrizJog1NomeBtn[i, j] = nomeBtnClicado then
+      begin
+        Result := matrizJog1[i, j];
+      end;
+    end;
+  end;
+
+end;
+
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
 var
-  nome1, nome2: string;
-  linhaJog1, linhaJog2, colunaJog1, colunaJog2, indiceNav, indiceMina,
-  indiceSub: integer;
-  btnSelecionado: TSpeedButton;
+  //nome1, nome2: string;
+  linhaJog1, colunaJog1, indiceNav, indiceMina, indiceSub: integer;
+
+  //btnSelecionado: TSpeedButton;
 
 begin
   cont := 0;
-  nome1 := edtJogador1.Text;
-  nome2 := edtJogador2.Text;
-  btnSelecionado := nil;
   indiceNav := 1;
   indiceSub := 2;
   indiceMina := 3;
 
-  tabLogin.TabVisible := False;
-  pgAreaJogo.ActivePage := tabTelaJogador1;
 
+  pgAreaJogo.ActivePage := tabTelaJogador1;
+  tabLogin.TabVisible := False;
   carregarMatriz;
+  carregarMatrizNomesBtn;
 
   for cont := 0 to 99 do
   begin
-    linhaJog1 := Random(11);
-    colunaJog1 := Random(11);
-    //indiceImg := Random(4);
+    linhaJog1 := Random(10)+1;
+    colunaJog1 := Random(10)+1;
 
     case cont of
-      0 .. 19:
-        sortearNavios(linhaJog1, colunaJog1, indiceNav, btnSelecionado);
-      20 .. 40:
-        sortearMinas(linhaJog1, colunaJog2, indiceMina, btnSelecionado);
-      41 .. 61:
-        sortearSubmarinos(linhaJog1, colunaJog2, indiceSub, btnSelecionado);
+      1 .. 20:
+        sortearNavios(linhaJog1, colunaJog1, indiceNav);
+      21 .. 40:
+        sortearMinas(linhaJog1, colunaJog1, indiceMina);
+      41 .. 60:
+        sortearSubmarinos(linhaJog1, colunaJog1, indiceSub);
     end;
   end;
-  ShowMessage(IntToStr(matrizJog1[1, 3]));
-  ShowMessage(IntToStr(matrizJog1[2, 3]));
-  ShowMessage(IntToStr(matrizJog1[3, 4]));
-  ShowMessage(IntToStr(matrizJog1[6, 1]));
+end;
+
+procedure TForm1.btn_1_1Click(Sender: TObject);
+begin
+  //Casting
+  TSpeedButton(Sender).ImageIndex := buscarBotao(TSpeedButton(Sender).Name);
+end;
+
+procedure TForm1.btn_1_2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  //Inicia na aba de login
+  pgAreaJogo.ActivePage := tabLogin;
 end;
 
 end.

@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="42"/>
       </Unit0>
       <Unit1>
         <Filename Value="untbatalhanaval.pas"/>
@@ -21,10 +21,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untBatalhaNaval"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="321"/>
-        <CursorPos X="5" Y="394"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="418"/>
+        <CursorPos X="6" Y="429"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -39,10 +38,10 @@
       <Unit3>
         <Filename Value="../ExemploMatriz/UnPrincipal.pas"/>
         <HasResources Value="True"/>
-        <TopLine Value="28"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="252"/>
         <CursorPos X="18" Y="259"/>
-        <UsageCount Value="13"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="14"/>
       </Unit3>
       <Unit4>
         <Filename Value="untbatalhanaval.lfm"/>
@@ -54,107 +53,147 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="../ExemploMatriz/UnPrincipal.pas"/>
-        <Caret Line="84" Column="10" TopLine="70"/>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="363" TopLine="347"/>
       </Position1>
       <Position2>
-        <Filename Value="../ExemploMatriz/UnPrincipal.pas"/>
-        <Caret Line="87" Column="9" TopLine="70"/>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="365" TopLine="347"/>
       </Position2>
       <Position3>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="354" Column="54" TopLine="341"/>
+        <Caret Line="366" TopLine="347"/>
       </Position3>
       <Position4>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="338" Column="4" TopLine="329"/>
+        <Caret Line="363" TopLine="347"/>
       </Position4>
       <Position5>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="337" Column="46" TopLine="325"/>
+        <Caret Line="365" TopLine="347"/>
       </Position5>
       <Position6>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="334" Column="68" TopLine="334"/>
+        <Caret Line="366" TopLine="347"/>
       </Position6>
       <Position7>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="337" Column="50" TopLine="325"/>
+        <Caret Line="363" TopLine="347"/>
       </Position7>
       <Position8>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="298" Column="5" TopLine="285"/>
+        <Caret Line="365" TopLine="347"/>
       </Position8>
       <Position9>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="306" Column="3" TopLine="287"/>
+        <Caret Line="366" TopLine="347"/>
       </Position9>
       <Position10>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="354" Column="11" TopLine="345"/>
+        <Caret Line="363" TopLine="347"/>
       </Position10>
       <Position11>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="337" Column="5" TopLine="325"/>
+        <Caret Line="365" TopLine="347"/>
       </Position11>
       <Position12>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="352" Column="78" TopLine="344"/>
+        <Caret Line="366" TopLine="347"/>
       </Position12>
       <Position13>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="261" Column="42" TopLine="277"/>
+        <Caret Line="363" TopLine="347"/>
       </Position13>
       <Position14>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="352" Column="8" TopLine="341"/>
+        <Caret Line="365" TopLine="347"/>
       </Position14>
       <Position15>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="353" Column="19" TopLine="341"/>
+        <Caret Line="366" TopLine="347"/>
       </Position15>
       <Position16>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="325" Column="45" TopLine="307"/>
+        <Caret Line="363" TopLine="347"/>
       </Position16>
       <Position17>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="367" Column="60" TopLine="359"/>
+        <Caret Line="365" TopLine="347"/>
       </Position17>
       <Position18>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="366" Column="66" TopLine="360"/>
+        <Caret Line="366" TopLine="347"/>
       </Position18>
       <Position19>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="314" Column="66" TopLine="307"/>
+        <Caret Line="363" TopLine="347"/>
       </Position19>
       <Position20>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="366" Column="65" TopLine="349"/>
+        <Caret Line="365" TopLine="347"/>
       </Position20>
       <Position21>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="322" TopLine="300"/>
+        <Caret Line="366" TopLine="347"/>
       </Position21>
       <Position22>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="367" Column="74" TopLine="355"/>
+        <Caret Line="363" TopLine="347"/>
       </Position22>
       <Position23>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="369" Column="68" TopLine="357"/>
+        <Caret Line="365" TopLine="347"/>
       </Position23>
       <Position24>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="262" Column="7" TopLine="250"/>
+        <Caret Line="366" TopLine="347"/>
       </Position24>
+      <Position25>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="363" TopLine="347"/>
+      </Position25>
+      <Position26>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="361" TopLine="347"/>
+      </Position26>
+      <Position27>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="363" TopLine="347"/>
+      </Position27>
+      <Position28>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="365" TopLine="347"/>
+      </Position28>
+      <Position29>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="362" TopLine="353"/>
+      </Position29>
+      <Position30>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="426" Column="30" TopLine="418"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes Count="0" ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="untbatalhanaval.pas"/>
+        <Line Value="429"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="nomeBtn"/>
+      </Item1>
+    </Watches>
+  </Debugging>
 </CONFIG>

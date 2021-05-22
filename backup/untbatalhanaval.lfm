@@ -6,6 +6,7 @@ object Form1: TForm1
   Caption = 'Form1'
   ClientHeight = 556
   ClientWidth = 857
+  OnShow = FormShow
   LCLVersion = '2.0.6.0'
   Visible = True
   object Panel1: TPanel
@@ -24,8 +25,8 @@ object Form1: TForm1
       Height = 512
       Top = 16
       Width = 816
-      ActivePage = tabLogin
-      TabIndex = 0
+      ActivePage = tabTelaJogador1
+      TabIndex = 1
       TabOrder = 0
       object tabLogin: TTabSheet
         Caption = 'Login'
@@ -2988,6 +2989,7 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_3: TSpeedButton
             Left = 288
@@ -2999,6 +3001,7 @@ object Form1: TForm1
             Color = clHighlight
             Font.Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
             ParentFont = False
           end
           object btn_1_4: TSpeedButton
@@ -3008,6 +3011,7 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_5: TSpeedButton
             Left = 364
@@ -3016,6 +3020,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_10: TSpeedButton
             Left = 554
@@ -3024,6 +3029,7 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_9: TSpeedButton
             Left = 516
@@ -3032,6 +3038,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_8: TSpeedButton
             Left = 478
@@ -3040,6 +3047,7 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_7: TSpeedButton
             Left = 440
@@ -3048,6 +3056,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_1_6: TSpeedButton
             Left = 402
@@ -3056,6 +3065,7 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_10: TSpeedButton
             Left = 554
@@ -3063,6 +3073,8 @@ object Form1: TForm1
             Top = 89
             Width = 40
             Color = clHighlight
+            Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_9: TSpeedButton
             Left = 516
@@ -3071,6 +3083,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_8: TSpeedButton
             Left = 478
@@ -3079,6 +3092,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_7: TSpeedButton
             Left = 440
@@ -3087,6 +3101,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_6: TSpeedButton
             Left = 402
@@ -3095,6 +3110,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_5: TSpeedButton
             Left = 364
@@ -3103,6 +3119,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_4: TSpeedButton
             Left = 326
@@ -3111,6 +3128,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_3: TSpeedButton
             Left = 288
@@ -3119,6 +3137,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_2: TSpeedButton
             Left = 250
@@ -3127,6 +3146,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_2_1: TSpeedButton
             Left = 212
@@ -3135,6 +3155,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_1: TSpeedButton
             Left = 212
@@ -3143,6 +3164,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_1: TSpeedButton
             Left = 212
@@ -3151,6 +3173,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_2: TSpeedButton
             Left = 250
@@ -3159,6 +3182,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_2: TSpeedButton
             Left = 250
@@ -3167,6 +3191,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_3: TSpeedButton
             Left = 288
@@ -3175,6 +3200,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_3: TSpeedButton
             Left = 288
@@ -3183,6 +3209,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_4: TSpeedButton
             Left = 326
@@ -3191,6 +3218,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_4: TSpeedButton
             Left = 326
@@ -3199,6 +3227,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_5: TSpeedButton
             Left = 364
@@ -3207,6 +3236,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_6: TSpeedButton
             Left = 402
@@ -3215,6 +3245,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object Button31: TSpeedButton
             Left = 440
@@ -3223,6 +3254,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object Button32: TSpeedButton
             Left = 478
@@ -3231,6 +3263,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_9: TSpeedButton
             Left = 516
@@ -3239,6 +3272,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_4_10: TSpeedButton
             Left = 554
@@ -3247,6 +3281,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_10: TSpeedButton
             Left = 554
@@ -3255,6 +3290,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_9: TSpeedButton
             Left = 516
@@ -3263,6 +3299,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_8: TSpeedButton
             Left = 478
@@ -3271,6 +3308,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_7: TSpeedButton
             Left = 440
@@ -3279,6 +3317,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_6: TSpeedButton
             Left = 402
@@ -3287,6 +3326,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_3_5: TSpeedButton
             Left = 364
@@ -3295,6 +3335,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_1: TSpeedButton
             Left = 212
@@ -3303,6 +3344,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_10: TSpeedButton
             Left = 554
@@ -3311,6 +3353,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_10: TSpeedButton
             Left = 554
@@ -3319,6 +3362,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_10: TSpeedButton
             Left = 554
@@ -3327,6 +3371,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_10: TSpeedButton
             Left = 554
@@ -3335,6 +3380,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_9: TSpeedButton
             Left = 516
@@ -3343,6 +3389,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_9: TSpeedButton
             Left = 516
@@ -3351,6 +3398,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_9: TSpeedButton
             Left = 516
@@ -3359,6 +3407,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_9: TSpeedButton
             Left = 516
@@ -3367,6 +3416,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_8: TSpeedButton
             Left = 478
@@ -3375,6 +3425,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_8: TSpeedButton
             Left = 478
@@ -3383,6 +3434,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_8: TSpeedButton
             Left = 478
@@ -3391,6 +3443,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_8: TSpeedButton
             Left = 478
@@ -3399,6 +3452,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_7: TSpeedButton
             Left = 440
@@ -3407,6 +3461,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_7: TSpeedButton
             Left = 440
@@ -3415,6 +3470,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_7: TSpeedButton
             Left = 440
@@ -3423,6 +3479,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_7: TSpeedButton
             Left = 440
@@ -3431,6 +3488,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_6: TSpeedButton
             Left = 402
@@ -3439,6 +3497,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_6: TSpeedButton
             Left = 402
@@ -3447,6 +3506,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_6: TSpeedButton
             Left = 402
@@ -3455,6 +3515,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_6: TSpeedButton
             Left = 402
@@ -3463,6 +3524,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_5: TSpeedButton
             Left = 364
@@ -3471,6 +3533,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_5: TSpeedButton
             Left = 364
@@ -3479,6 +3542,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_5: TSpeedButton
             Left = 364
@@ -3487,6 +3551,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_5: TSpeedButton
             Left = 364
@@ -3495,6 +3560,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_4: TSpeedButton
             Left = 326
@@ -3503,6 +3569,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_4: TSpeedButton
             Left = 326
@@ -3511,6 +3578,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_4: TSpeedButton
             Left = 326
@@ -3519,6 +3587,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_4: TSpeedButton
             Left = 326
@@ -3527,6 +3596,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_3: TSpeedButton
             Left = 288
@@ -3535,6 +3605,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_3: TSpeedButton
             Left = 288
@@ -3543,6 +3614,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_3: TSpeedButton
             Left = 288
@@ -3551,6 +3623,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_3: TSpeedButton
             Left = 288
@@ -3559,6 +3632,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_2: TSpeedButton
             Left = 250
@@ -3567,6 +3641,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_2: TSpeedButton
             Left = 250
@@ -3575,6 +3650,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_2: TSpeedButton
             Left = 250
@@ -3583,6 +3659,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_5_2: TSpeedButton
             Left = 250
@@ -3591,6 +3668,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_6_1: TSpeedButton
             Left = 212
@@ -3599,6 +3677,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_8_1: TSpeedButton
             Left = 212
@@ -3607,6 +3686,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_7_1: TSpeedButton
             Left = 212
@@ -3615,6 +3695,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_1: TSpeedButton
             Left = 212
@@ -3623,6 +3704,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_1: TSpeedButton
             Left = 212
@@ -3631,6 +3713,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_2: TSpeedButton
             Left = 250
@@ -3639,6 +3722,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_2: TSpeedButton
             Left = 250
@@ -3647,6 +3731,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_3: TSpeedButton
             Left = 288
@@ -3655,6 +3740,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_3: TSpeedButton
             Left = 288
@@ -3663,6 +3749,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_4: TSpeedButton
             Left = 326
@@ -3671,6 +3758,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_4: TSpeedButton
             Left = 326
@@ -3679,6 +3767,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_5: TSpeedButton
             Left = 364
@@ -3687,6 +3776,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_5: TSpeedButton
             Left = 364
@@ -3695,6 +3785,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_6: TSpeedButton
             Left = 402
@@ -3703,6 +3794,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_6: TSpeedButton
             Left = 402
@@ -3711,6 +3803,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_7: TSpeedButton
             Left = 440
@@ -3719,6 +3812,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_7: TSpeedButton
             Left = 440
@@ -3727,6 +3821,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_8: TSpeedButton
             Left = 478
@@ -3735,6 +3830,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_8: TSpeedButton
             Left = 478
@@ -3743,6 +3839,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_9: TSpeedButton
             Left = 516
@@ -3751,6 +3848,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_9: TSpeedButton
             Left = 516
@@ -3759,6 +3857,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_9_10: TSpeedButton
             Left = 554
@@ -3767,6 +3866,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object btn_10_10: TSpeedButton
             Left = 554
@@ -3775,6 +3875,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
           object Label12: TLabel
             Left = 191
@@ -3914,6 +4015,7 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
             Images = ImageList1
+            OnClick = btn_1_1Click
           end
         end
       end
@@ -6059,63 +6161,63 @@ object Form1: TForm1
             Width = 40
             Color = clInfoText
           end
-          object Button111: TSpeedButton
+          object btnJog2_2_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button112: TSpeedButton
+          object btnJog2_2_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button113: TSpeedButton
+          object btnJog2_2_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button114: TSpeedButton
+          object btnJog2_2_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button115: TSpeedButton
+          object btnJog2_2_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button116: TSpeedButton
+          object btnJog2_2_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button117: TSpeedButton
+          object btnJog2_2_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button118: TSpeedButton
+          object btnJog2_2_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 89
             Width = 40
             Color = clHighlight
           end
-          object Button119: TSpeedButton
+          object btnJog2_2_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 89
@@ -6143,126 +6245,126 @@ object Form1: TForm1
             Width = 40
             Color = clHighlight
           end
-          object Button123: TSpeedButton
+          object btnJog2_3_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button124: TSpeedButton
+          object btnJog2_4_2: TSpeedButton
             Left = 250
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button125: TSpeedButton
+          object btnJog2_4_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button126: TSpeedButton
+          object btnJog2_3_3: TSpeedButton
             Left = 288
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button127: TSpeedButton
+          object btnJog2_3_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button128: TSpeedButton
+          object btnJog2_4_4: TSpeedButton
             Left = 326
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button129: TSpeedButton
+          object btnJog2_4_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button130: TSpeedButton
+          object btnJog2_4_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button131: TSpeedButton
+          object btnJog2_4_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button132: TSpeedButton
+          object btnJog2_4_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button133: TSpeedButton
+          object btnJog2_4_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button134: TSpeedButton
+          object btnJog2_4_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 165
             Width = 40
             Color = clHighlight
           end
-          object Button135: TSpeedButton
+          object btnJog2_3_10: TSpeedButton
             Left = 554
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button136: TSpeedButton
+          object btnJog2_3_9: TSpeedButton
             Left = 516
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button137: TSpeedButton
+          object btnJog2_3_8: TSpeedButton
             Left = 478
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button138: TSpeedButton
+          object btnJog2_3_7: TSpeedButton
             Left = 440
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button139: TSpeedButton
+          object btnJog2_3_6: TSpeedButton
             Left = 402
             Height = 40
             Top = 127
             Width = 40
             Color = clHighlight
           end
-          object Button140: TSpeedButton
+          object btnJog2_3_5: TSpeedButton
             Left = 364
             Height = 40
             Top = 127
