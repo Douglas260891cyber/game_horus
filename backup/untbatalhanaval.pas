@@ -214,37 +214,26 @@ type
     btn_9_7: TSpeedButton;
     btn_9_8: TSpeedButton;
     btn_9_9: TSpeedButton;
+    edtPontoJog1: TEdit;
+    edtPontoJog2: TEdit;
     edtJogador1: TEdit;
     edtJogador2: TEdit;
     Image1: TImage;
+    Image2: TImage;
     Image3: TImage;
+    imgAvatarJog1: TImage;
     ImageList1: TImageList;
+    imgAvatarJog2: TImage;
     Label1: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
-    Label13: TLabel;
-    Label14: TLabel;
-    Label15: TLabel;
-    Label16: TLabel;
-    Label17: TLabel;
-    Label18: TLabel;
-    Label19: TLabel;
-    Label2: TLabel;
-    Label20: TLabel;
-    Label21: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
+    lbeNomeJog2: TLabel;
+    lbeNomeJog1: TLabel;
     Panel2: TPanel;
     Panel3: TPanel;
+    pnlJog1: TPanel;
+    pnlJog2: TPanel;
     pnlLogin: TPanel;
     pgAreaJogo: TPageControl;
-    Panel1: TPanel;
+    edtJogadores: TPanel;
     tabLogin: TTabSheet;
     tabTelaJogador2: TTabSheet;
     tabTelaJogador1: TTabSheet;
@@ -266,6 +255,7 @@ type
     procedure carregarMatrizNomesBtn();
     function buscarBotao(nomeBtnClicado: string): integer;
     function buscarBotao2(nomeBtnClicado2: string): integer;
+    procedure pontuacao(linha, coluna: integer);
 
   public
   end;
@@ -276,7 +266,7 @@ var
   matrizJog1NomeBtn: array [1..10, 1..10] of string;
   matrizJog2: array [1..10, 1..10] of integer;
   matrizJog2NomeBtn: array [1..10, 1..10] of string;
-  cont: integer;
+  cont, pontosJog1, pontosJog2: integer;
 
 implementation
 
@@ -397,6 +387,8 @@ begin
     begin
       if matrizJog1NomeBtn[i, j] = nomeBtnClicado then
       begin
+        //Configurar a somatória dos pontos
+        pontuacao(i, j);
         Result := matrizJog1[i, j];
       end;
     end;
@@ -420,10 +412,41 @@ begin
   end;
 end;
 
+procedure TForm1.pontuacao(linha, coluna: integer);
+var
+  ponto, resultado: integer;
+begin
+  pontosJog1 := 100;
+  pontosJog2 := 100;
+
+  case matrizJog1[linha, coluna] of
+    1:
+    begin
+      ponto := 5;
+      pontosJog1 := pontosJog1 - ponto;
+      edtPontoJog1.Text := 'Pnts: ' + IntToStr(pontosJog1);
+      ponto := 0;
+    end;
+    2:
+    begin
+      ponto := 10;
+      pontosJog1 := pontosJog1 - ponto;
+      edtPontoJog1.Text := 'Pnts: ' + IntToStr(pontosJog1);
+      ponto := 0;
+    end;
+    3:
+    begin
+      ponto := 15;
+      pontosJog2 := pontosJog2 - ponto;
+      edtPontoJog2.Text := 'Pnts: ' + IntToStr(pontosJog2);
+      ponto := 0;
+    end;
+  end;
+end;
+
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
 var
-  //nome1, nome2: string;
   linhaJog1, colunaJog1, linhaJog2, colunaJog2, indiceNav, indiceMina,
   indiceSub: integer;
 
@@ -433,6 +456,8 @@ begin
   indiceSub := 2;
   indiceMina := 3;
 
+  lbeNomeJog1.Caption := edtJogador1.Text;
+  lbeNomeJog2.Caption := edtJogador2.Text;
 
   pgAreaJogo.ActivePage := tabTelaJogador1;
   tabLogin.TabVisible := False;
