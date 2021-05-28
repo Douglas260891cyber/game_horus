@@ -221,9 +221,8 @@ type
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
-    imgAvatarJog1: TImage;
+    imgListAvatares: TImageList;
     ImageList1: TImageList;
-    imgAvatarJog2: TImage;
     Label1: TLabel;
     lbeNomeJog2: TLabel;
     lbeNomeJog1: TLabel;
@@ -244,8 +243,11 @@ type
     procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure imgJog1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
+    procedure sbtnAvatarJog2Click(Sender: TObject);
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
@@ -256,6 +258,7 @@ type
     function buscarBotao(nomeBtnClicado: string): integer;
     function buscarBotao2(nomeBtnClicado2: string): integer;
     procedure pontuacaoJog1(linha, coluna: integer);
+    procedure pontuacaoJog2(linha, coluna: integer);
 
   public
   end;
@@ -284,12 +287,27 @@ begin
 
 end;
 
+procedure TForm1.Image4Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.imgJog1Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm1.Label2Click(Sender: TObject);
 begin
 
 end;
 
 procedure TForm1.Panel2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.sbtnAvatarJog2Click(Sender: TObject);
 begin
 
 end;
@@ -321,16 +339,6 @@ begin
   end
   else
     cont := cont - 1;
-
-  //for j := 0 to ComponentCount - 1 do
-  //begin
-  //if Components[j].Name = 'btn_' + IntToStr(linha) + '_' +
-  //IntToStr(coluna) then
-  //begin
-  //btnSelecionado := TSpeedButton(Components[j]);
-  //btnSelecionado.ImageIndex := indiceImg;
-  //end;
-  //  end;
 end;
 
 //SORTEANDO MINAS
@@ -406,6 +414,7 @@ begin
     begin
       if matrizJog2NomeBtn[i, j] = nomeBtnClicado2 then
       begin
+        pontuacaoJog2(i, j);
         Result := matrizJog2[i, j];
       end;
     end;
@@ -414,32 +423,62 @@ end;
 
 procedure TForm1.pontuacaoJog1(linha, coluna: integer);
 var
-  ponto, resultado: integer;
+  ponto: integer;
+
 begin
-  pontosJog1 := 100;
-  pontosJog2 := 100;
+  pontosJog1 := StrToInt(edtPontoJog1.Text);
+  pontosJog2 := StrToInt(edtPontoJog2.Text);
+  ponto := 0;
 
   case matrizJog1[linha, coluna] of
     1:
     begin
       ponto := 5;
       pontosJog1 := pontosJog1 - ponto;
-      edtPontoJog1.Text := 'Pnts: ' + IntToStr(pontosJog1);
-      ponto := 0;
+      edtPontoJog1.Text := IntToStr(pontosJog1);
     end;
     2:
     begin
       ponto := 10;
       pontosJog1 := pontosJog1 - ponto;
-      edtPontoJog1.Text := 'Pnts: ' + IntToStr(pontosJog1);
-      ponto := 0;
+      edtPontoJog1.Text := IntToStr(pontosJog1);
     end;
     3:
     begin
       ponto := 15;
       pontosJog2 := pontosJog2 - ponto;
-      edtPontoJog2.Text := 'Pnts: ' + IntToStr(pontosJog2);
-      ponto := 0;
+      edtPontoJog2.Text := IntToStr(pontosJog2);
+    end;
+  end;
+end;
+
+procedure TForm1.pontuacaoJog2(linha, coluna: integer);
+  var
+  ponto2: integer;
+
+begin
+  pontosJog1 := StrToInt(edtPontoJog1.Text);
+  pontosJog2 := StrToInt(edtPontoJog2.Text);
+  ponto2 := 0;
+
+  case matrizJog2[linha, coluna] of
+    1:
+    begin
+      ponto2 := 5;
+      pontosJog2 := pontosJog2 - ponto2;
+      edtPontoJog2.Text := IntToStr(pontosJog2);
+    end;
+    2:
+    begin
+      ponto2 := 10;
+      pontosJog2 := pontosJog2 - ponto2;
+      edtPontoJog2.Text := IntToStr(pontosJog2);
+    end;
+    3:
+    begin
+      ponto2 := 15;
+      pontosJog1 := pontosJog1 - ponto2;
+      edtPontoJog1.Text := IntToStr(pontosJog1);
     end;
   end;
 end;
