@@ -221,6 +221,8 @@ type
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
     imgListAvatares: TImageList;
     ImageList1: TImageList;
     Label1: TLabel;
@@ -247,6 +249,7 @@ type
     procedure imgJog1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
+    procedure pgAreaJogoChange(Sender: TObject);
     procedure sbtnAvatarJog2Click(Sender: TObject);
   private
     //DECLARANDO FUNÇÕES
@@ -270,6 +273,7 @@ var
   matrizJog2: array [1..10, 1..10] of integer;
   matrizJog2NomeBtn: array [1..10, 1..10] of string;
   cont, pontosJog1, pontosJog2: integer;
+  nomeJog1, nomeJog2: string;
 
 implementation
 
@@ -303,6 +307,11 @@ begin
 end;
 
 procedure TForm1.Panel2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.pgAreaJogoChange(Sender: TObject);
 begin
 
 end;
@@ -430,30 +439,35 @@ begin
   pontosJog2 := StrToInt(edtPontoJog2.Text);
   ponto := 0;
 
-  case matrizJog1[linha, coluna] of
-    1:
-    begin
-      ponto := 5;
-      pontosJog1 := pontosJog1 - ponto;
-      edtPontoJog1.Text := IntToStr(pontosJog1);
+  if edtPontoJog1.Text <> '0' then
+  begin
+    case matrizJog1[linha, coluna] of
+      1:
+      begin
+        ponto := 5;
+        pontosJog1 := pontosJog1 - ponto;
+        edtPontoJog1.Text := IntToStr(pontosJog1);
+      end;
+      2:
+      begin
+        ponto := 10;
+        pontosJog1 := pontosJog1 - ponto;
+        edtPontoJog1.Text := IntToStr(pontosJog1);
+      end;
+      3:
+      begin
+        ponto := 15;
+        pontosJog2 := pontosJog2 - ponto;
+        edtPontoJog2.Text := IntToStr(pontosJog2);
+      end;
     end;
-    2:
-    begin
-      ponto := 10;
-      pontosJog1 := pontosJog1 - ponto;
-      edtPontoJog1.Text := IntToStr(pontosJog1);
-    end;
-    3:
-    begin
-      ponto := 15;
-      pontosJog2 := pontosJog2 - ponto;
-      edtPontoJog2.Text := IntToStr(pontosJog2);
-    end;
-  end;
+  end
+  else
+    ShowMessage(nomeJog2 + ' venceu!!!!!');
 end;
 
 procedure TForm1.pontuacaoJog2(linha, coluna: integer);
-  var
+var
   ponto2: integer;
 
 begin
@@ -461,27 +475,33 @@ begin
   pontosJog2 := StrToInt(edtPontoJog2.Text);
   ponto2 := 0;
 
-  case matrizJog2[linha, coluna] of
-    1:
-    begin
-      ponto2 := 5;
-      pontosJog2 := pontosJog2 - ponto2;
-      edtPontoJog2.Text := IntToStr(pontosJog2);
+  if edtPontoJog2.Text <> '0' then
+  begin
+    case matrizJog2[linha, coluna] of
+      1:
+      begin
+        ponto2 := 5;
+        pontosJog2 := pontosJog2 - ponto2;
+        edtPontoJog2.Text := IntToStr(pontosJog2);
+      end;
+      2:
+      begin
+        ponto2 := 10;
+        pontosJog2 := pontosJog2 - ponto2;
+        edtPontoJog2.Text := IntToStr(pontosJog2);
+      end;
+      3:
+      begin
+        ponto2 := 15;
+        pontosJog1 := pontosJog1 - ponto2;
+        edtPontoJog1.Text := IntToStr(pontosJog1);
+      end;
     end;
-    2:
-    begin
-      ponto2 := 10;
-      pontosJog2 := pontosJog2 - ponto2;
-      edtPontoJog2.Text := IntToStr(pontosJog2);
-    end;
-    3:
-    begin
-      ponto2 := 15;
-      pontosJog1 := pontosJog1 - ponto2;
-      edtPontoJog1.Text := IntToStr(pontosJog1);
-    end;
-  end;
+  end
+  else
+    ShowMessage(nomeJog1 + ' venceu!!!!!');
 end;
+
 
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
@@ -495,8 +515,10 @@ begin
   indiceSub := 2;
   indiceMina := 3;
 
-  lbeNomeJog1.Caption := edtJogador1.Text;
-  lbeNomeJog2.Caption := edtJogador2.Text;
+  nomeJog1 := edtJogador1.Text;
+  nomeJog2 := edtJogador2.Text;
+  lbeNomeJog1.Caption := nomeJog1;
+  lbeNomeJog2.Caption := nomeJog2;
 
   pgAreaJogo.ActivePage := tabTelaJogador1;
   tabLogin.TabVisible := False;
