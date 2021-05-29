@@ -219,15 +219,16 @@ type
     edtJogador1: TEdit;
     edtJogador2: TEdit;
     Image1: TImage;
-    Image2: TImage;
+    Image10: TImage;
+    imgAvatarJog1: TImage;
     Image3: TImage;
-    Image4: TImage;
+    imgListaAvatares: TImageList;
     Image5: TImage;
-    imgListAvatares: TImageList;
     ImageList1: TImageList;
     Label1: TLabel;
     lbeNomeJog2: TLabel;
     lbeNomeJog1: TLabel;
+    pnlAvatarJog1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     pnlJog1: TPanel;
@@ -244,8 +245,9 @@ type
     procedure btn_1_2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Image1Click(Sender: TObject);
-    procedure Image2Click(Sender: TObject);
+    procedure Image10Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
+    procedure imgAvatarJog1Click(Sender: TObject);
     procedure imgJog1Click(Sender: TObject);
     procedure Label2Click(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
@@ -262,6 +264,7 @@ type
     function buscarBotao2(nomeBtnClicado2: string): integer;
     procedure pontuacaoJog1(linha, coluna: integer);
     procedure pontuacaoJog2(linha, coluna: integer);
+    procedure imagemAvatar;
 
   public
   end;
@@ -286,12 +289,17 @@ begin
 
 end;
 
-procedure TForm1.Image2Click(Sender: TObject);
+procedure TForm1.Image10Click(Sender: TObject);
 begin
 
 end;
 
 procedure TForm1.Image4Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.imgAvatarJog1Click(Sender: TObject);
 begin
 
 end;
@@ -439,7 +447,7 @@ begin
   pontosJog2 := StrToInt(edtPontoJog2.Text);
   ponto := 0;
 
-  if edtPontoJog1.Text <> '0' then
+  if edtPontoJog1.Text > '0' then
   begin
     case matrizJog1[linha, coluna] of
       1:
@@ -463,7 +471,10 @@ begin
     end;
   end
   else
+  begin
     ShowMessage(nomeJog2 + ' venceu!!!!!');
+  end;
+  imagemAvatar;
 end;
 
 procedure TForm1.pontuacaoJog2(linha, coluna: integer);
@@ -475,7 +486,7 @@ begin
   pontosJog2 := StrToInt(edtPontoJog2.Text);
   ponto2 := 0;
 
-  if edtPontoJog2.Text <> '0' then
+  if edtPontoJog2.Text > '0' then
   begin
     case matrizJog2[linha, coluna] of
       1:
@@ -499,8 +510,46 @@ begin
     end;
   end
   else
+  begin
     ShowMessage(nomeJog1 + ' venceu!!!!!');
+  end;
+  imagemAvatar;
 end;
+
+procedure TForm1.imagemAvatar;
+begin
+  // imlSirene = ImageList
+  // imgSirene = TImage
+  // imgCarregada = indice onde está a imagem
+
+  if (edtPontoJog1.Text > '480') and (edtPontoJog1.Text <= '600') then
+  begin
+    imgListaAvatares.GetBitmap(0, imgAvatarJog1.Picture.Bitmap);
+    imgAvatarJog1.Repaint;
+  end
+  else if (edtPontoJog1.Text > '360') and (edtPontoJog1.Text <= '480') then
+  begin
+    imgListaAvatares.GetBitmap(1, imgAvatarJog1.Picture.Bitmap);
+    imgAvatarJog1.Repaint;
+  end
+  else if (edtPontoJog1.Text > '240') and (edtPontoJog1.Text <= '360') then
+  begin
+    imgListaAvatares.GetBitmap(2, imgAvatarJog1.Picture.Bitmap);
+    imgAvatarJog1.Repaint;
+  end
+  else if (edtPontoJog1.Text > '120') and (edtPontoJog1.Text <= '240') then
+  begin
+    imgListaAvatares.GetBitmap(3, imgAvatarJog1.Picture.Bitmap);
+    imgAvatarJog1.Repaint;
+  end
+  else if edtPontoJog1.Text = '0' then
+  begin
+    imgListaAvatares.GetBitmap(4, imgAvatarJog1.Picture.Bitmap);
+    imgAvatarJog1.Repaint;
+  end;
+end;
+
+
 
 
 //BOTÃO START
@@ -524,6 +573,7 @@ begin
   tabLogin.TabVisible := False;
   carregarMatriz;
   carregarMatrizNomesBtn;
+  imagemAvatar;
 
   for cont := 0 to 99 do
   begin

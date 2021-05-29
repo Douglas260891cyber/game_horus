@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1574718682"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/home/douglasmoro/Documentos/cursosETrabalho/sistemasDeInformação_TI/3_semestre/linguagem_de_programacao_I/game_horus/backup/backup/lib/x86_64-linux -Fu/usr/lib/lazarus/2.0.6/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/2.0.6/lcl/units/x86_64-linux -Fu/usr/lib/lazarus/2.0.6/components/lazutils/lib/x86_64-linux -Fu/usr/lib/lazarus/2.0.6/packager/units/x86_64-linux -Fu/home/douglasmoro/Documentos/cursosETrabalho/sistemasDeInformação_TI/3_semestre/linguagem_de_programacao_I/game_horus/backup/backup/ -FU/home/douglasmoro/Documentos/cursosETrabalho/sistemasDeInformação_TI/3_semestre/linguagem_de_programacao_I/game_horus/backup/backup/lib/x86_64-linux/ -FE/home/douglasmoro/Documentos/cursosETrabalho/sistemasDeInformação_TI/3_semestre/linguagem_de_programacao_I/game_horus/backup/backup/ -o/home/douglasmoro/Documentos/cursosETrabalho/sistemasDeInformação_TI/3_semestre/linguagem_de_programacao_I/game_horus/backup/backup/batalha_naval -dLCL -dLCLgtk2 batalha_naval.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
