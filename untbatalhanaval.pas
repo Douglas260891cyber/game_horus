@@ -220,14 +220,15 @@ type
     edtJogador2: TEdit;
     Image1: TImage;
     Image10: TImage;
+    imgAvatarJog2: TImage;
     imgAvatarJog1: TImage;
     Image3: TImage;
     imgListaAvatares: TImageList;
-    Image5: TImage;
     ImageList1: TImageList;
     Label1: TLabel;
     lbeNomeJog2: TLabel;
     lbeNomeJog1: TLabel;
+    pnlAvatarJog2: TPanel;
     pnlAvatarJog1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -264,7 +265,9 @@ type
     function buscarBotao2(nomeBtnClicado2: string): integer;
     procedure pontuacaoJog1(linha, coluna: integer);
     procedure pontuacaoJog2(linha, coluna: integer);
-    procedure imagemAvatar;
+    procedure imagemAvatarUm;
+    procedure imagemAvatarDois;
+    procedure confereVencedor;
 
   public
   end;
@@ -370,6 +373,7 @@ begin
     cont := cont - 1;
 end;
 
+//SORTEANDO SUBMARINOS
 procedure TForm1.sortearSubmarinos(linha, coluna, submarino, linha2, coluna2: integer);
 begin
   if (matrizJog1[linha, coluna] = 0) and (matrizJog2[linha2, coluna2] = 0) then
@@ -469,12 +473,10 @@ begin
         edtPontoJog2.Text := IntToStr(pontosJog2);
       end;
     end;
-  end
-  else
-  begin
-    ShowMessage(nomeJog2 + ' venceu!!!!!');
   end;
-  imagemAvatar;
+  imagemAvatarUm;
+  imagemAvatarDois;
+  confereVencedor;
 end;
 
 procedure TForm1.pontuacaoJog2(linha, coluna: integer);
@@ -508,15 +510,13 @@ begin
         edtPontoJog1.Text := IntToStr(pontosJog1);
       end;
     end;
-  end
-  else
-  begin
-    ShowMessage(nomeJog1 + ' venceu!!!!!');
   end;
-  imagemAvatar;
+  imagemAvatarDois;
+  imagemAvatarUm;
+  confereVencedor;
 end;
 
-procedure TForm1.imagemAvatar;
+procedure TForm1.imagemAvatarUm;
 begin
   // imlSirene = ImageList
   // imgSirene = TImage
@@ -537,20 +537,54 @@ begin
     imgListaAvatares.GetBitmap(2, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if (edtPontoJog1.Text > '120') and (edtPontoJog1.Text <= '240') then
+  else if (edtPontoJog1.Text > '0') and (edtPontoJog1.Text <= '240') then
   begin
     imgListaAvatares.GetBitmap(3, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if edtPontoJog1.Text = '0' then
+  else if edtPontoJog1.Text <= '0' then
   begin
     imgListaAvatares.GetBitmap(4, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end;
 end;
 
+procedure TForm1.imagemAvatarDois;
+begin
+  if (edtPontoJog2.Text > '480') and (edtPontoJog2.Text <= '600') then
+  begin
+    imgListaAvatares.GetBitmap(0, imgAvatarJog2.Picture.Bitmap);
+    imgAvatarJog2.Repaint;
+  end
+  else if (edtPontoJog2.Text > '360') and (edtPontoJog2.Text <= '480') then
+  begin
+    imgListaAvatares.GetBitmap(1, imgAvatarJog2.Picture.Bitmap);
+    imgAvatarJog2.Repaint;
+  end
+  else if (edtPontoJog2.Text > '240') and (edtPontoJog2.Text <= '360') then
+  begin
+    imgListaAvatares.GetBitmap(2, imgAvatarJog2.Picture.Bitmap);
+    imgAvatarJog2.Repaint;
+  end
+  else if (edtPontoJog2.Text > '0') and (edtPontoJog2.Text <= '240') then
+  begin
+    imgListaAvatares.GetBitmap(3, imgAvatarJog2.Picture.Bitmap);
+    imgAvatarJog2.Repaint;
+  end
+  else if edtPontoJog2.Text <= '0' then
+  begin
+    imgListaAvatares.GetBitmap(4, imgAvatarJog2.Picture.Bitmap);
+    imgAvatarJog2.Repaint;
+  end;
+end;
 
-
+procedure TForm1.confereVencedor;
+begin
+  if edtPontoJog1.Text <= '0' then
+    ShowMessage(nomeJog2 + ' venceu!!!!!')
+  else if edtPontoJog2.Text <= '0' then
+    ShowMessage(nomeJog1 + ' venceu!!!!!');
+end;
 
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
@@ -568,12 +602,15 @@ begin
   nomeJog2 := edtJogador2.Text;
   lbeNomeJog1.Caption := nomeJog1;
   lbeNomeJog2.Caption := nomeJog2;
+  tabTelaJogador1.TabVisible := True;
+  tabTelaJogador2.TabVisible := True;
 
   pgAreaJogo.ActivePage := tabTelaJogador1;
   tabLogin.TabVisible := False;
   carregarMatriz;
   carregarMatrizNomesBtn;
-  imagemAvatar;
+  imagemAvatarUm;
+  imagemAvatarDois;
 
   for cont := 0 to 99 do
   begin
@@ -613,6 +650,8 @@ procedure TForm1.FormShow(Sender: TObject);
 begin
   //Inicia na aba de login
   pgAreaJogo.ActivePage := tabLogin;
+  tabTelaJogador1.TabVisible := False;
+  tabTelaJogador2.TabVisible := False;
 end;
 
 end.

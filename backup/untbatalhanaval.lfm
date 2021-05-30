@@ -8497,19 +8497,20 @@ object Form1: TForm1
           end
         end
         object pnlAvatarJog1: TPanel
-          Left = 16
-          Height = 152
-          Top = 240
-          Width = 170
-          Caption = 'pnlAvatarJog1'
-          ClientHeight = 152
-          ClientWidth = 170
+          Left = 43
+          Height = 104
+          Top = 288
+          Width = 114
+          ClientHeight = 104
+          ClientWidth = 114
+          Color = clBlack
+          ParentColor = False
           TabOrder = 1
           object imgAvatarJog1: TImage
-            Left = 61
-            Height = 84
-            Top = 308
-            Width = 74
+            Left = 19
+            Height = 80
+            Top = 12
+            Width = 78
           end
         end
       end
@@ -16096,11 +16097,22 @@ object Form1: TForm1
             TabOrder = 1
             Text = '600'
           end
-          object Image5: TImage
-            Left = 61
-            Height = 84
-            Top = 308
-            Width = 74
+          object pnlAvatarJog2: TPanel
+            Left = 43
+            Height = 104
+            Top = 288
+            Width = 114
+            ClientHeight = 104
+            ClientWidth = 114
+            Color = clBlack
+            ParentColor = False
+            TabOrder = 2
+            object imgAvatarJog2: TImage
+              Left = 19
+              Height = 80
+              Top = 12
+              Width = 78
+            end
           end
         end
       end

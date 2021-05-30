@@ -21,8 +21,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untBatalhaNaval"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="534"/>
-        <CursorPos X="39" Y="545"/>
+        <TopLine Value="301"/>
+        <CursorPos X="3" Y="304"/>
         <UsageCount Value="64"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,7 +32,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="84"/>
         <CursorPos X="71" Y="9"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit2>
       <Unit3>
@@ -41,7 +41,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="252"/>
         <CursorPos X="18" Y="259"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit3>
       <Unit4>
         <Filename Value="untbatalhanaval.lfm"/>
@@ -50,7 +50,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="121"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit4>
       <Unit5>
@@ -58,17 +58,17 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1992"/>
         <CursorPos X="14" Y="1872"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit5>
       <Unit6>
         <Filename Value="backup/untbatalhanaval.pas"/>
         <UnitName Value="untBatalhaNaval"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="259"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit6>
     </Units>
-    <JumpHistory Count="22" HistoryIndex="21">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="untbatalhanaval.pas"/>
         <Caret Line="265" Column="28" TopLine="250"/>
@@ -155,8 +155,16 @@
       </Position21>
       <Position22>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="545" Column="34" TopLine="533"/>
+        <Caret Line="545" Column="39" TopLine="534"/>
       </Position22>
+      <Position23>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="304" Column="3" TopLine="301"/>
+      </Position23>
+      <Position24>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="303" Column="3" TopLine="300"/>
+      </Position24>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
