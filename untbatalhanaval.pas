@@ -517,32 +517,37 @@ begin
 end;
 
 procedure TForm1.imagemAvatarUm;
+var
+  pontuacao: integer;
+
 begin
   // imlSirene = ImageList
   // imgSirene = TImage
   // imgCarregada = indice onde está a imagem
 
-  if (edtPontoJog1.Text > '480') and (edtPontoJog1.Text <= '600') then
+  pontuacao := StrToInt(edtPontoJog1.Text);
+
+  if (pontuacao > 480) and (pontuacao <= 600) then
   begin
     imgListaAvatares.GetBitmap(0, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if (edtPontoJog1.Text > '360') and (edtPontoJog1.Text <= '480') then
+  else if (pontuacao > 360) and (pontuacao <= 480) then
   begin
     imgListaAvatares.GetBitmap(1, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if (edtPontoJog1.Text > '240') and (edtPontoJog1.Text <= '360') then
+  else if (pontuacao > 240) and (pontuacao <= 360) then
   begin
     imgListaAvatares.GetBitmap(2, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if (edtPontoJog1.Text > '0') and (edtPontoJog1.Text <= '240') then
+  else if (pontuacao > 0) and (pontuacao <= 240) then
   begin
     imgListaAvatares.GetBitmap(3, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
   end
-  else if edtPontoJog1.Text <= '0' then
+  else if pontuacao <= 0 then
   begin
     imgListaAvatares.GetBitmap(4, imgAvatarJog1.Picture.Bitmap);
     imgAvatarJog1.Repaint;
@@ -550,28 +555,34 @@ begin
 end;
 
 procedure TForm1.imagemAvatarDois;
+var
+  pontuacao: integer;
+
 begin
-  if (edtPontoJog2.Text > '480') and (edtPontoJog2.Text <= '600') then
+
+  pontuacao := StrToInt(edtPontoJog2.Text);
+
+  if (pontuacao > 480) and (pontuacao <= 600) then
   begin
     imgListaAvatares.GetBitmap(0, imgAvatarJog2.Picture.Bitmap);
     imgAvatarJog2.Repaint;
   end
-  else if (edtPontoJog2.Text > '360') and (edtPontoJog2.Text <= '480') then
+  else if (pontuacao > 360) and (pontuacao <= 480) then
   begin
     imgListaAvatares.GetBitmap(1, imgAvatarJog2.Picture.Bitmap);
     imgAvatarJog2.Repaint;
   end
-  else if (edtPontoJog2.Text > '240') and (edtPontoJog2.Text <= '360') then
+  else if (pontuacao > 240) and (pontuacao <= 360) then
   begin
     imgListaAvatares.GetBitmap(2, imgAvatarJog2.Picture.Bitmap);
     imgAvatarJog2.Repaint;
   end
-  else if (edtPontoJog2.Text > '0') and (edtPontoJog2.Text <= '240') then
+  else if (pontuacao > 0) and (pontuacao <= 240) then
   begin
     imgListaAvatares.GetBitmap(3, imgAvatarJog2.Picture.Bitmap);
     imgAvatarJog2.Repaint;
   end
-  else if edtPontoJog2.Text <= '0' then
+  else if pontuacao <= 0 then
   begin
     imgListaAvatares.GetBitmap(4, imgAvatarJog2.Picture.Bitmap);
     imgAvatarJog2.Repaint;
@@ -581,9 +592,15 @@ end;
 procedure TForm1.confereVencedor;
 begin
   if edtPontoJog1.Text <= '0' then
-    ShowMessage(nomeJog2 + ' venceu!!!!!')
+  begin
+    tabTelaJogador2.TabVisible := False;
+    ShowMessage(nomeJog2 + ' venceu!!!!!');
+  end
   else if edtPontoJog2.Text <= '0' then
+  begin
+    tabTelaJogador1.TabVisible := False;
     ShowMessage(nomeJog1 + ' venceu!!!!!');
+  end;
 end;
 
 //BOTÃO START
