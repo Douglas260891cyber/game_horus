@@ -254,6 +254,7 @@ type
     procedure Panel2Click(Sender: TObject);
     procedure pgAreaJogoChange(Sender: TObject);
     procedure sbtnAvatarJog2Click(Sender: TObject);
+    procedure tmrControleTimer(Sender: TObject);
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
@@ -330,6 +331,10 @@ end;
 procedure TForm1.sbtnAvatarJog2Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.tmrControleTimer(Sender: TObject);
+begin
 end;
 
 //GARREGANDO A MATRIZ COM VALORES PADRÕES
@@ -525,7 +530,7 @@ begin
   // imgSirene = TImage
   // imgCarregada = indice onde está a imagem
 
-  pontuacao:=StrToInt(edtPontoJog1.text);
+  pontuacao := StrToInt(edtPontoJog1.Text);
 
   if (pontuacao > 480) and (pontuacao <= 600) then
   begin
@@ -560,7 +565,7 @@ var
 
 begin
 
-  pontuacao:=StrToInt(edtPontoJog2.Text);
+  pontuacao := StrToInt(edtPontoJog2.Text);
 
   if (pontuacao > 480) and (pontuacao <= 600) then
   begin
@@ -649,12 +654,14 @@ end;
 
 procedure TForm1.btnJog2_1_1Click(Sender: TObject);
 begin
+  TSpeedButton(Sender).Enabled := False;
   TSpeedButton(Sender).ImageIndex := buscarBotao2(TSpeedButton(Sender).Name);
 end;
 
 procedure TForm1.btn_1_1Click(Sender: TObject);
 begin
   //Casting
+  TSpeedButton(Sender).Enabled := False;
   TSpeedButton(Sender).ImageIndex := buscarBotao(TSpeedButton(Sender).Name);
 end;
 

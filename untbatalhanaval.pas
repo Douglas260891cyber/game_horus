@@ -254,6 +254,7 @@ type
     procedure Panel2Click(Sender: TObject);
     procedure pgAreaJogoChange(Sender: TObject);
     procedure sbtnAvatarJog2Click(Sender: TObject);
+    procedure tmrControleTimer(Sender: TObject);
   private
     //DECLARANDO FUNÇÕES
     procedure carregarMatriz;
@@ -330,6 +331,10 @@ end;
 procedure TForm1.sbtnAvatarJog2Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.tmrControleTimer(Sender: TObject);
+begin
 end;
 
 //GARREGANDO A MATRIZ COM VALORES PADRÕES
@@ -650,12 +655,14 @@ end;
 procedure TForm1.btnJog2_1_1Click(Sender: TObject);
 begin
   TSpeedButton(Sender).ImageIndex := buscarBotao2(TSpeedButton(Sender).Name);
+  TSpeedButton(Sender).Enabled := False;
 end;
 
 procedure TForm1.btn_1_1Click(Sender: TObject);
 begin
   //Casting
   TSpeedButton(Sender).ImageIndex := buscarBotao(TSpeedButton(Sender).Name);
+  TSpeedButton(Sender).Enabled := False;
 end;
 
 procedure TForm1.btn_1_2Click(Sender: TObject);

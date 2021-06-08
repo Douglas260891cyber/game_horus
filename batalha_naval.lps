@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="67"/>
       </Unit0>
       <Unit1>
         <Filename Value="untbatalhanaval.pas"/>
@@ -21,9 +21,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="untBatalhaNaval"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="301"/>
-        <CursorPos X="3" Y="304"/>
-        <UsageCount Value="64"/>
+        <TopLine Value="646"/>
+        <CursorPos X="77" Y="665"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -68,7 +68,7 @@
         <UsageCount Value="9"/>
       </Unit6>
     </Units>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="untbatalhanaval.pas"/>
         <Caret Line="265" Column="28" TopLine="250"/>
@@ -91,80 +91,92 @@
       </Position5>
       <Position6>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="526" Column="38" TopLine="539"/>
+        <Caret Line="525" Column="38" TopLine="525"/>
       </Position6>
       <Position7>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="525" Column="38" TopLine="525"/>
+        <Caret Line="514" Column="64" TopLine="504"/>
       </Position7>
       <Position8>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="514" Column="64" TopLine="504"/>
+        <Caret Line="303" Column="3" TopLine="301"/>
       </Position8>
       <Position9>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="313" Column="56" TopLine="454"/>
+        <Caret Line="520" Column="30" TopLine="503"/>
       </Position9>
       <Position10>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="303" Column="3" TopLine="301"/>
+        <Caret Line="519" Column="30" TopLine="502"/>
       </Position10>
       <Position11>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="520" Column="30" TopLine="503"/>
+        <Caret Line="518" Column="30" TopLine="501"/>
       </Position11>
       <Position12>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="519" Column="30" TopLine="502"/>
+        <Caret Line="532" Column="31" TopLine="511"/>
       </Position12>
       <Position13>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="518" Column="30" TopLine="501"/>
+        <Caret Line="536" Column="34" TopLine="519"/>
       </Position13>
       <Position14>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="532" Column="31" TopLine="511"/>
+        <Caret Line="528" Column="16" TopLine="516"/>
       </Position14>
       <Position15>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="536" Column="34" TopLine="519"/>
+        <Caret Line="537" Column="8" TopLine="521"/>
       </Position15>
       <Position16>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="528" Column="16" TopLine="516"/>
+        <Caret Line="520" Column="29" TopLine="520"/>
       </Position16>
       <Position17>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="537" Column="8" TopLine="521"/>
+        <Caret Line="540" Column="28" TopLine="521"/>
       </Position17>
       <Position18>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="520" Column="29" TopLine="520"/>
+        <Caret Line="547" Column="34" TopLine="527"/>
       </Position18>
       <Position19>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="540" Column="28" TopLine="521"/>
+        <Caret Line="548" Column="34" TopLine="528"/>
       </Position19>
       <Position20>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="547" Column="34" TopLine="527"/>
+        <Caret Line="545" Column="39" TopLine="534"/>
       </Position20>
       <Position21>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="548" Column="34" TopLine="528"/>
+        <Caret Line="304" Column="3" TopLine="301"/>
       </Position21>
       <Position22>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="545" Column="39" TopLine="534"/>
+        <Caret Line="303" Column="3" TopLine="300"/>
       </Position22>
       <Position23>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="304" Column="3" TopLine="301"/>
+        <Caret Line="400" Column="60" TopLine="424"/>
       </Position23>
       <Position24>
         <Filename Value="untbatalhanaval.pas"/>
-        <Caret Line="303" Column="3" TopLine="300"/>
+        <Caret Line="399" Column="60" TopLine="399"/>
       </Position24>
+      <Position25>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="422" Column="45" TopLine="408"/>
+      </Position25>
+      <Position26>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="265" Column="18" TopLine="257"/>
+      </Position26>
+      <Position27>
+        <Filename Value="untbatalhanaval.pas"/>
+        <Caret Line="667" Column="5" TopLine="654"/>
+      </Position27>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
