@@ -269,7 +269,8 @@ type
     procedure imagemAvatarUm;
     procedure imagemAvatarDois;
     procedure confereVencedor;
-
+    procedure informaAlvo(btnClacado: string);
+    procedure alvoAbatido(alvo: integer);
   public
   end;
 
@@ -608,6 +609,59 @@ begin
   end;
 end;
 
+procedure TForm1.informaAlvo(btnClacado: string);
+var
+  i, j, alvo: integer;
+begin
+  if tabTelaJogador1.TabVisible = True then
+  begin
+    for i := 1 to 10 do
+    begin
+      for j := 1 to 10 do
+      begin
+        if matrizJog1NomeBtn[i, j] = btnClacado then
+        begin
+          alvo := matrizJog1[i, j];
+          alvoAbatido(alvo);
+          tabTelaJogador1.TabVisible := False;
+          tabTelaJogador2.TabVisible := True;
+        end;
+      end;
+    end;
+  end
+  else if tabTelaJogador2.TabVisible = True then
+  begin
+    for i := 1 to 10 do
+    begin
+      for j := 1 to 10 do
+      begin
+        if matrizJog2NomeBtn[i, j] = btnClacado then
+        begin
+          alvo := matrizJog2[i, j];
+          alvoAbatido(alvo);
+          tabTelaJogador2.TabVisible := False;
+          tabTelaJogador1.TabVisible := True;
+        end;
+      end;
+    end;
+  end;
+
+end;
+
+procedure TForm1.alvoAbatido(alvo: integer);
+begin
+  case alvo of
+    0:
+      ShowMessage('ERROU :(');
+    1:
+      ShowMessage('PORTA AVIÕES :)');
+    2:
+      ShowMessage('SUBMARINO :)');
+    3:
+      ShowMessage('OH NÃO!!! UMA MINA :(');
+  end;
+end;
+
 //BOTÃO START
 procedure TForm1.btnStartClick(Sender: TObject);
 var
@@ -625,10 +679,9 @@ begin
   lbeNomeJog1.Caption := nomeJog1;
   lbeNomeJog2.Caption := nomeJog2;
   tabTelaJogador1.TabVisible := True;
-  tabTelaJogador2.TabVisible := True;
-
   pgAreaJogo.ActivePage := tabTelaJogador1;
   tabLogin.TabVisible := False;
+
   carregarMatriz;
   carregarMatrizNomesBtn;
   imagemAvatarUm;
@@ -656,6 +709,8 @@ procedure TForm1.btnJog2_1_1Click(Sender: TObject);
 begin
   TSpeedButton(Sender).ImageIndex := buscarBotao2(TSpeedButton(Sender).Name);
   TSpeedButton(Sender).Enabled := False;
+
+  informaAlvo(TSpeedButton(Sender).Name);
 end;
 
 procedure TForm1.btn_1_1Click(Sender: TObject);
@@ -663,6 +718,8 @@ begin
   //Casting
   TSpeedButton(Sender).ImageIndex := buscarBotao(TSpeedButton(Sender).Name);
   TSpeedButton(Sender).Enabled := False;
+
+  informaAlvo(TSpeedButton(Sender).Name);
 end;
 
 procedure TForm1.btn_1_2Click(Sender: TObject);
